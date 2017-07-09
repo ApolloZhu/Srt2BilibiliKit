@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52ECC4191F129B4B00879573 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4181F129B4B00879573 /* main.swift */; };
+		52ECC4661F12A9C600879573 /* Srt2BilibiliKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52ECC4681F12A9C600879573 /* S2BDanmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmuku.swift */; };
+		52ECC4691F12A9C600879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
+		52ECC46A1F12A9C600879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
+		52ECC46B1F12A9C600879573 /* srt2bilibili.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4101F129B2200879573 /* srt2bilibili.swift */; };
+		52ECC46C1F12A9C600879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
+		52ECC4741F12A9CA00879573 /* Srt2BilibiliKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52ECC4761F12A9CA00879573 /* S2BDanmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmuku.swift */; };
+		52ECC4771F12A9CA00879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
+		52ECC4781F12A9CA00879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
+		52ECC4791F12A9CA00879573 /* srt2bilibili.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4101F129B2200879573 /* srt2bilibili.swift */; };
+		52ECC47A1F12A9CA00879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
+		52ECC47B1F12A9CB00879573 /* Srt2BilibiliKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52ECC47D1F12A9CB00879573 /* S2BDanmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmuku.swift */; };
+		52ECC47E1F12A9CB00879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
+		52ECC47F1F12A9CB00879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
+		52ECC4801F12A9CB00879573 /* srt2bilibili.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4101F129B2200879573 /* srt2bilibili.swift */; };
+		52ECC4811F12A9CB00879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
+		52ECC4821F12A9CC00879573 /* Srt2BilibiliKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52ECC4841F12A9CC00879573 /* S2BDanmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmuku.swift */; };
+		52ECC4851F12A9CC00879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
+		52ECC4861F12A9CC00879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
+		52ECC4871F12A9CC00879573 /* srt2bilibili.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4101F129B2200879573 /* srt2bilibili.swift */; };
+		52ECC4881F12A9CC00879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
+		52ECC4A51F12C67200879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
+		52ECC4A61F12C67200879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
+		52ECC4A71F12C67300879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
+		52ECC4A81F12C67300879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
+		52ECC4AB1F12C73900879573 /* S2BDanmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmuku.swift */; };
+		52ECC4AC1F12C73900879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
+		52ECC4AD1F12C73900879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
+		52ECC4AE1F12C73900879573 /* srt2bilibili.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4101F129B2200879573 /* srt2bilibili.swift */; };
+		52ECC4AF1F12C73900879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
+		52ECC4B01F12C73900879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52ECC4141F129B4B00879573 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Srt2BilibiliKit.h; sourceTree = "<group>"; };
+		52ECC4051F129A3600879573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52ECC40C1F129B1800879573 /* S2BDanmuku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = S2BDanmuku.swift; path = ../../../../Desktop/srt2bilibili/S2BDanmuku.swift; sourceTree = "<group>"; };
+		52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = S2BSubRipFile.swift; path = ../../../../Desktop/srt2bilibili/S2BSubRipFile.swift; sourceTree = "<group>"; };
+		52ECC4101F129B2200879573 /* srt2bilibili.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = srt2bilibili.swift; path = ../../../../Desktop/srt2bilibili/srt2bilibili/srt2bilibili.swift; sourceTree = "<group>"; };
+		52ECC4161F129B4B00879573 /* Srt2BilibiliKit-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Srt2BilibiliKit-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52ECC4181F129B4B00879573 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52ECC41D1F129D5800879573 /* S2BSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubtitle.swift; sourceTree = "<group>"; };
+		52ECC41F1F12A39E00879573 /* S2BCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BCookie.swift; sourceTree = "<group>"; };
+		52ECC4371F12A93F00879573 /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52ECC4441F12A94B00879573 /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52ECC4511F12A95800879573 /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52ECC45E1F12A96400879573 /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52ECC48E1F12B78000879573 /* S2BVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BVideo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52ECC4131F129B4B00879573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4331F12A93F00879573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4401F12A94B00879573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC44D1F12A95800879573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC45A1F12A96400879573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52ECC3F71F129A3500879573 = {
+			isa = PBXGroup;
+			children = (
+				52ECC4031F129A3600879573 /* Srt2BilibiliKit */,
+				52ECC4171F129B4B00879573 /* Srt2BilibiliKit-cli */,
+				52ECC4021F129A3600879573 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52ECC4021F129A3600879573 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52ECC4161F129B4B00879573 /* Srt2BilibiliKit-cli */,
+				52ECC4371F12A93F00879573 /* Srt2BilibiliKit.framework */,
+				52ECC4441F12A94B00879573 /* Srt2BilibiliKit.framework */,
+				52ECC4511F12A95800879573 /* Srt2BilibiliKit.framework */,
+				52ECC45E1F12A96400879573 /* Srt2BilibiliKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52ECC4031F129A3600879573 /* Srt2BilibiliKit */ = {
+			isa = PBXGroup;
+			children = (
+				52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */,
+				52ECC4051F129A3600879573 /* Info.plist */,
+				52ECC40C1F129B1800879573 /* S2BDanmuku.swift */,
+				52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */,
+				52ECC41D1F129D5800879573 /* S2BSubtitle.swift */,
+				52ECC4101F129B2200879573 /* srt2bilibili.swift */,
+				52ECC48E1F12B78000879573 /* S2BVideo.swift */,
+				52ECC41F1F12A39E00879573 /* S2BCookie.swift */,
+			);
+			path = Srt2BilibiliKit;
+			sourceTree = "<group>";
+		};
+		52ECC4171F129B4B00879573 /* Srt2BilibiliKit-cli */ = {
+			isa = PBXGroup;
+			children = (
+				52ECC4181F129B4B00879573 /* main.swift */,
+			);
+			path = "Srt2BilibiliKit-cli";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52ECC4341F12A93F00879573 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4661F12A9C600879573 /* Srt2BilibiliKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4411F12A94B00879573 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4821F12A9CC00879573 /* Srt2BilibiliKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC44E1F12A95800879573 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4741F12A9CA00879573 /* Srt2BilibiliKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC45B1F12A96400879573 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC47B1F12A9CB00879573 /* Srt2BilibiliKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52ECC4151F129B4B00879573 /* Srt2BilibiliKit-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52ECC41A1F129B4B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-cli" */;
+			buildPhases = (
+				52ECC4121F129B4B00879573 /* Sources */,
+				52ECC4131F129B4B00879573 /* Frameworks */,
+				52ECC4141F129B4B00879573 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Srt2BilibiliKit-cli";
+			productName = "Srt2BilibiliKit-cli";
+			productReference = 52ECC4161F129B4B00879573 /* Srt2BilibiliKit-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+		52ECC4361F12A93F00879573 /* Srt2BilibiliKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52ECC43C1F12A93F00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-iOS" */;
+			buildPhases = (
+				52ECC4321F12A93F00879573 /* Sources */,
+				52ECC4331F12A93F00879573 /* Frameworks */,
+				52ECC4341F12A93F00879573 /* Headers */,
+				52ECC4351F12A93F00879573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Srt2BilibiliKit-iOS";
+			productName = "Srt2BilibiliKit-iOS";
+			productReference = 52ECC4371F12A93F00879573 /* Srt2BilibiliKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52ECC4431F12A94B00879573 /* Srt2BilibiliKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52ECC4491F12A94B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-watchOS" */;
+			buildPhases = (
+				52ECC43F1F12A94B00879573 /* Sources */,
+				52ECC4401F12A94B00879573 /* Frameworks */,
+				52ECC4411F12A94B00879573 /* Headers */,
+				52ECC4421F12A94B00879573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Srt2BilibiliKit-watchOS";
+			productName = "Srt2BilibiliKit-watchOS";
+			productReference = 52ECC4441F12A94B00879573 /* Srt2BilibiliKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52ECC4501F12A95800879573 /* Srt2BilibiliKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52ECC4561F12A95800879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-tvOS" */;
+			buildPhases = (
+				52ECC44C1F12A95800879573 /* Sources */,
+				52ECC44D1F12A95800879573 /* Frameworks */,
+				52ECC44E1F12A95800879573 /* Headers */,
+				52ECC44F1F12A95800879573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Srt2BilibiliKit-tvOS";
+			productName = "Srt2BilibiliKit-tvOS";
+			productReference = 52ECC4511F12A95800879573 /* Srt2BilibiliKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52ECC45D1F12A96400879573 /* Srt2BilibiliKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52ECC4631F12A96500879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-macOS" */;
+			buildPhases = (
+				52ECC4591F12A96400879573 /* Sources */,
+				52ECC45A1F12A96400879573 /* Frameworks */,
+				52ECC45B1F12A96400879573 /* Headers */,
+				52ECC45C1F12A96400879573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Srt2BilibiliKit-macOS";
+			productName = "Srt2BilibiliKit-macOS";
+			productReference = 52ECC45E1F12A96400879573 /* Srt2BilibiliKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52ECC3F81F129A3600879573 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = S2B;
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = WWITDC;
+				TargetAttributes = {
+					52ECC4151F129B4B00879573 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					52ECC4361F12A93F00879573 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					52ECC4431F12A94B00879573 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					52ECC4501F12A95800879573 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					52ECC45D1F12A96400879573 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 52ECC3FB1F129A3600879573 /* Build configuration list for PBXProject "Srt2BilibiliKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52ECC3F71F129A3500879573;
+			productRefGroup = 52ECC4021F129A3600879573 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52ECC4151F129B4B00879573 /* Srt2BilibiliKit-cli */,
+				52ECC4361F12A93F00879573 /* Srt2BilibiliKit-iOS */,
+				52ECC4431F12A94B00879573 /* Srt2BilibiliKit-watchOS */,
+				52ECC4501F12A95800879573 /* Srt2BilibiliKit-tvOS */,
+				52ECC45D1F12A96400879573 /* Srt2BilibiliKit-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52ECC4351F12A93F00879573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4421F12A94B00879573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC44F1F12A95800879573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC45C1F12A96400879573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52ECC4121F129B4B00879573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4191F129B4B00879573 /* main.swift in Sources */,
+				52ECC4AF1F12C73900879573 /* S2BVideo.swift in Sources */,
+				52ECC4AC1F12C73900879573 /* S2BSubRipFile.swift in Sources */,
+				52ECC4AB1F12C73900879573 /* S2BDanmuku.swift in Sources */,
+				52ECC4B01F12C73900879573 /* S2BCookie.swift in Sources */,
+				52ECC4AE1F12C73900879573 /* srt2bilibili.swift in Sources */,
+				52ECC4AD1F12C73900879573 /* S2BSubtitle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4321F12A93F00879573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC46B1F12A9C600879573 /* srt2bilibili.swift in Sources */,
+				52ECC4A51F12C67200879573 /* S2BVideo.swift in Sources */,
+				52ECC4691F12A9C600879573 /* S2BSubRipFile.swift in Sources */,
+				52ECC46A1F12A9C600879573 /* S2BSubtitle.swift in Sources */,
+				52ECC4681F12A9C600879573 /* S2BDanmuku.swift in Sources */,
+				52ECC46C1F12A9C600879573 /* S2BCookie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC43F1F12A94B00879573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4871F12A9CC00879573 /* srt2bilibili.swift in Sources */,
+				52ECC4A61F12C67200879573 /* S2BVideo.swift in Sources */,
+				52ECC4851F12A9CC00879573 /* S2BSubRipFile.swift in Sources */,
+				52ECC4861F12A9CC00879573 /* S2BSubtitle.swift in Sources */,
+				52ECC4841F12A9CC00879573 /* S2BDanmuku.swift in Sources */,
+				52ECC4881F12A9CC00879573 /* S2BCookie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC44C1F12A95800879573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4791F12A9CA00879573 /* srt2bilibili.swift in Sources */,
+				52ECC4A71F12C67300879573 /* S2BVideo.swift in Sources */,
+				52ECC4771F12A9CA00879573 /* S2BSubRipFile.swift in Sources */,
+				52ECC4781F12A9CA00879573 /* S2BSubtitle.swift in Sources */,
+				52ECC4761F12A9CA00879573 /* S2BDanmuku.swift in Sources */,
+				52ECC47A1F12A9CA00879573 /* S2BCookie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52ECC4591F12A96400879573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52ECC4801F12A9CB00879573 /* srt2bilibili.swift in Sources */,
+				52ECC4A81F12C67300879573 /* S2BVideo.swift in Sources */,
+				52ECC47E1F12A9CB00879573 /* S2BSubRipFile.swift in Sources */,
+				52ECC47F1F12A9CB00879573 /* S2BSubtitle.swift in Sources */,
+				52ECC47D1F12A9CB00879573 /* S2BDanmuku.swift in Sources */,
+				52ECC4811F12A9CB00879573 /* S2BCookie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52ECC4071F129A3600879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52ECC4081F129A3600879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52ECC41B1F129B4B00879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				FRAMEWORK_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		52ECC41C1F129B4B00879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				FRAMEWORK_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		52ECC43D1F12A93F00879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-iOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52ECC43E1F12A93F00879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-iOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52ECC44A1F12A94B00879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-watchOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		52ECC44B1F12A94B00879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-watchOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		52ECC4571F12A95800879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-tvOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		52ECC4581F12A95800879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-tvOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		52ECC4641F12A96500879573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-macOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		52ECC4651F12A96500879573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-macOS";
+				PRODUCT_NAME = Srt2BilibiliKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52ECC3FB1F129A3600879573 /* Build configuration list for PBXProject "Srt2BilibiliKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC4071F129A3600879573 /* Debug */,
+				52ECC4081F129A3600879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52ECC41A1F129B4B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC41B1F129B4B00879573 /* Debug */,
+				52ECC41C1F129B4B00879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52ECC43C1F12A93F00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC43D1F12A93F00879573 /* Debug */,
+				52ECC43E1F12A93F00879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52ECC4491F12A94B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC44A1F12A94B00879573 /* Debug */,
+				52ECC44B1F12A94B00879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52ECC4561F12A95800879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC4571F12A95800879573 /* Debug */,
+				52ECC4581F12A95800879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52ECC4631F12A96500879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52ECC4641F12A96500879573 /* Debug */,
+				52ECC4651F12A96500879573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52ECC3F81F129A3600879573 /* Project object */;
+}
