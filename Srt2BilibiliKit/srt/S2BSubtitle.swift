@@ -12,31 +12,34 @@ public struct S2BSubtitle {
     public let index: Int
     public let startTime: TimeInterval
     public let endTime: TimeInterval
-    public let content: [String]
-}
+    public let contents: [String]
 
-extension S2BSubtitle {
-    public init(index: Int, from start: TimeInterval, to end: TimeInterval, content: String...) {
+    public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: [String]) {
         self.index = index
         self.startTime = start
         self.endTime = end
-        self.content = content
+        self.contents = contents
+    }
+
+    public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: String...) {
+        self.init(index: index, from: start, to: end, contents: contents)
     }
 }
 
 extension S2BSubtitle {
-    init(index: Int, time: String, content: [String]) {
+    init(index: Int, time: String, contents: [String]) {
         self.index = index
-        self.content = content
+        self.contents = contents
         let timestamps = time.components(separatedBy: " --> ")
-        self.startTime = S2BSubtitle.interval(from: timestamps[0])
-        self.endTime = S2BSubtitle.interval(from: timestamps[1])
+        self.startTime = S2BSubtitle.timeInterval(from: timestamps[0])
+        self.endTime = S2BSubtitle.timeInterval(from: timestamps[1])
     }
 
-    private static func interval(from string: String) -> TimeInterval {
-        var dict = string.split(separator: ","), major = dict[0].split(separator: ":").map { Double("\($0)")! }
-        let (h,m,s,c) = (major[0], major[1], major[2], Double("\(dict[1])")!)
-        return h * 3600 + m * 60 + s + c / 1000
+    private static func timeInterval(from string: String) -> TimeInterval {
+        let num = string.split(separator: ",")
+            .flatMap { $0.split(separator: ":") }
+            .flatMap { Double("\($0)") }
+        return num[0] * 3600 + num[1] * 60 + num[2] + num[3] / 1000
     }
 }
 
@@ -45,7 +48,7 @@ extension S2BSubtitle: CustomStringConvertible {
         return """
         \(index)
         \(S2BSubtitle.string(from: startTime)) --> \(S2BSubtitle.string(from: endTime))
-        \(content.joined(separator: "\n"))
+        \(contents.joined(separator: "\n"))
         """
     }
 

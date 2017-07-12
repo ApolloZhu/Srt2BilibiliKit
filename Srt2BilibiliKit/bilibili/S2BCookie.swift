@@ -8,7 +8,12 @@
 
 import Foundation
 
+/// Cookie required to post danmaku
 public struct S2BCookie: Codable {
+
+    /// Default S2BCookie as saved in a file named `bilicookies` at current working directory, which can be retrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py .
+    public static var `default`: S2BCookie! = S2BCookie()
+
     private let mid: Int
     private let md5Sum: String
     private let sessionData: String
@@ -19,25 +24,37 @@ public struct S2BCookie: Codable {
         case sessionData = "SESSDATA"
     }
 
+    /// Initialize a S2BCookie with required cookie value,
+    /// available after login a bilibili account.
+    ///
+    /// - Parameters:
+    ///   - DedeUserID: user's mid assigned by bilibili
+    ///   - DedeUserID__ckMd5: md5 sum calculated by bilibili
+    ///   - SESSDATA: some session data saved by bilibili
     public init(DedeUserID: Int, DedeUserID__ckMd5: String, SESSDATA: String) {
         mid = DedeUserID
         md5Sum = DedeUserID__ckMd5
         sessionData = SESSDATA
     }
-}
 
-extension S2BCookie {
-    public static var `default` = S2BCookie.init(file: "bilicookies", at: FileManager.default.currentDirectoryPath)
-
-    public init?(file: String, at directory: String?) {
-        guard let string = try? String(contentsOfFile: "\(directory ?? "")/\(file)")
+    /// Initialize a S2BCookie with a file at directory,
+    /// with contents of format `DedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx`
+    ///
+    /// - Parameters:
+    ///   - file: name of the file.
+    ///   - directory: where the file is located.
+    public init?(path: String? = nil) {
+        guard let string = try? String(contentsOfFile: path
+            ?? "\(FileManager.default.currentDirectoryPath)/bilicookies")
             else { return nil }
         var dict = [String:String]()
         for part in string
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .split(separator: ";") {
-                let parts = part.split(separator: "=")
-                dict["\(parts[0])"] = "\(parts[1])"
+                let parts = part
+                    .split(separator: "=")
+                    .map { "\($0)".trimmingCharacters(in: .whitespacesAndNewlines) }
+                if parts.count == 2 { dict[parts[0]] = parts[1] }
         }
         guard let str = dict[CodingKeys.mid.stringValue],
             let mid = Int(str),
