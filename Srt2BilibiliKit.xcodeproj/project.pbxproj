@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522A74731F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
+		522A74741F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
+		522A74751F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
+		522A74761F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
+		522A74771F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
 		523C7BB61F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BB71F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BB81F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
@@ -57,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2BPostableDanmaku.swift; sourceTree = "<group>"; };
 		523C7BB41F15DE17006DADAB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		523C7BB51F15EC56006DADAB /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
 		52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Srt2BilibiliKit.h; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				52ECC41F1F12A39E00879573 /* S2BCookie.swift */,
 				52ECC48E1F12B78000879573 /* S2BVideo.swift */,
 				52ECC40C1F129B1800879573 /* S2BDanmaku.swift */,
+				522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */,
 			);
 			path = bilibili;
 			sourceTree = "<group>";
@@ -392,6 +399,7 @@
 				52ECC4AC1F12C73900879573 /* S2BSubRipFile.swift in Sources */,
 				52ECC4AB1F12C73900879573 /* S2BDanmaku.swift in Sources */,
 				523C7BB61F15EC56006DADAB /* S2BEmitter.swift in Sources */,
+				522A74731F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
 				52ECC4B01F12C73900879573 /* S2BCookie.swift in Sources */,
 				52ECC4AD1F12C73900879573 /* S2BSubtitle.swift in Sources */,
 			);
@@ -405,6 +413,7 @@
 				52ECC4A51F12C67200879573 /* S2BVideo.swift in Sources */,
 				52ECC4691F12A9C600879573 /* S2BSubRipFile.swift in Sources */,
 				52ECC46A1F12A9C600879573 /* S2BSubtitle.swift in Sources */,
+				522A74741F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
 				52ECC4681F12A9C600879573 /* S2BDanmaku.swift in Sources */,
 				52ECC46C1F12A9C600879573 /* S2BCookie.swift in Sources */,
 			);
@@ -418,6 +427,7 @@
 				52ECC4A61F12C67200879573 /* S2BVideo.swift in Sources */,
 				52ECC4851F12A9CC00879573 /* S2BSubRipFile.swift in Sources */,
 				52ECC4861F12A9CC00879573 /* S2BSubtitle.swift in Sources */,
+				522A74751F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
 				52ECC4841F12A9CC00879573 /* S2BDanmaku.swift in Sources */,
 				52ECC4881F12A9CC00879573 /* S2BCookie.swift in Sources */,
 			);
@@ -431,6 +441,7 @@
 				52ECC4A71F12C67300879573 /* S2BVideo.swift in Sources */,
 				52ECC4771F12A9CA00879573 /* S2BSubRipFile.swift in Sources */,
 				52ECC4781F12A9CA00879573 /* S2BSubtitle.swift in Sources */,
+				522A74761F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
 				52ECC4761F12A9CA00879573 /* S2BDanmaku.swift in Sources */,
 				52ECC47A1F12A9CA00879573 /* S2BCookie.swift in Sources */,
 			);
@@ -444,6 +455,7 @@
 				52ECC4A81F12C67300879573 /* S2BVideo.swift in Sources */,
 				52ECC47E1F12A9CB00879573 /* S2BSubRipFile.swift in Sources */,
 				52ECC47F1F12A9CB00879573 /* S2BSubtitle.swift in Sources */,
+				522A74771F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
 				52ECC47D1F12A9CB00879573 /* S2BDanmaku.swift in Sources */,
 				52ECC4811F12A9CB00879573 /* S2BCookie.swift in Sources */,
 			);

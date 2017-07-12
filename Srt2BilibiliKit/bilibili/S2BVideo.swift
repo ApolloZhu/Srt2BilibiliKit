@@ -10,17 +10,17 @@ import Foundation
 
 /// Bilibili video, identified by unique av number (aid).
 public struct S2BVideo {
-
+    
     /// AV number, the unique identifier of the video
     public let aid: Int
-
+    
     /// Initialize a S2BVideo with its av number
     ///
     /// - Parameter aid: av number of the video
     public init(av aid: Int) {
         self.aid = aid
     }
-
+    
     /// Sub page of video, identified by unique cid.
     public struct Page: Codable {
         /// Index of the page
@@ -29,18 +29,18 @@ public struct S2BVideo {
         public let pageName: String
         /// Unique identifier of the page
         public let cid: Int
-
+        
         enum CodingKeys: String, CodingKey {
             case page, cid
             case pageName = "pagename"
         }
     }
-
+    
     /// Handler type for all pages fetched.
     ///
     /// - Parameter pages: pages fetched, nil if failed or the video has no sub pages.
     public typealias PagesHandler = (_ pages: [Page]?) -> Void
-
+    
     /// Fetch all pages of video and perform action over.
     ///
     /// - Parameter code: code to perform on the pages.
@@ -50,19 +50,19 @@ public struct S2BVideo {
             code(pages)
             }.resume()
     }
-
+    
     /// Handler type for single page fetched.
     ///
     /// - Parameter page: page fetched, nil if failed.
     public typealias PageHandler = (_ page: Page?) -> Void
-
+    
     /// Fetch the first page of video and perform action over.
     ///
     /// - Parameter code: code to perform on the page.
     public func p1(code: @escaping PageHandler) {
         pages { code($0?.first) }
     }
-
+    
     /// Fetch page of video at index and perform action over.
     ///
     /// - Parameters:
@@ -75,7 +75,7 @@ public struct S2BVideo {
             code(pages[index - 1])
         }
     }
-
+    
     /// Fetch page of video at index and perform action over.
     ///
     /// - Parameters:

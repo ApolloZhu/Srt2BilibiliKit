@@ -10,20 +10,20 @@ import Foundation
 
 /// Cookie required to post danmaku
 public struct S2BCookie: Codable {
-
+    
     /// Default S2BCookie as saved in a file named `bilicookies` at current working directory, which can be retrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py .
     public static var `default`: S2BCookie! = S2BCookie()
-
+    
     private let mid: Int
     private let md5Sum: String
     private let sessionData: String
-
+    
     enum CodingKeys: String, CodingKey {
         case mid = "DedeUserID"
         case md5Sum = "DedeUserID__ckMd5"
         case sessionData = "SESSDATA"
     }
-
+    
     /// Initialize a S2BCookie with required cookie value,
     /// available after login a bilibili account.
     ///
@@ -36,7 +36,7 @@ public struct S2BCookie: Codable {
         md5Sum = DedeUserID__ckMd5
         sessionData = SESSDATA
     }
-
+    
     /// Initialize a S2BCookie with a file at directory,
     /// with contents of format `DedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx`
     ///

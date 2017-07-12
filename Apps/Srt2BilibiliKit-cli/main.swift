@@ -161,11 +161,11 @@ let configs = zip(zip(color, fontSize), zip(mode, pool)).map {
 
 S2BVideo(av: aid).page(page) {
     guard let cid = $0?.cid, let title = $0?.pageName else { fatalError("Unable to fetch video") }
-    print("Posting to \(title)")
+    print("Posting to \(title)\n")
     let emitter = S2BEmitter(cookie: cookie, delay: delay)
-    emitter.post(srt: subRip, toCID: cid, configs: configs) {
-        exit(0)
-    }
+    emitter.post(srt: subRip, toCID: cid, configs: configs, updateHandler: { danmaku, progress in
+        print("\(String(format: "%7.3f%%", progress.fractionCompleted * 100)) \(danmaku.content)")
+    }) { exit(0) }
 }
 
 // MARK: Wait

@@ -13,14 +13,14 @@ public struct S2BSubtitle {
     public let startTime: TimeInterval
     public let endTime: TimeInterval
     public let contents: [String]
-
+    
     public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: [String]) {
         self.index = index
         self.startTime = start
         self.endTime = end
         self.contents = contents
     }
-
+    
     public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: String...) {
         self.init(index: index, from: start, to: end, contents: contents)
     }
@@ -34,7 +34,7 @@ extension S2BSubtitle {
         self.startTime = S2BSubtitle.timeInterval(from: timestamps[0])
         self.endTime = S2BSubtitle.timeInterval(from: timestamps[1])
     }
-
+    
     private static func timeInterval(from string: String) -> TimeInterval {
         let num = string.split(separator: ",")
             .flatMap { $0.split(separator: ":") }
@@ -51,7 +51,7 @@ extension S2BSubtitle: CustomStringConvertible {
         \(contents.joined(separator: "\n"))
         """
     }
-
+    
     private static func string(from interval: TimeInterval) -> String {
         let h = Int(interval / 3600)
         var interval = interval.remainder(dividingBy: 3600)
