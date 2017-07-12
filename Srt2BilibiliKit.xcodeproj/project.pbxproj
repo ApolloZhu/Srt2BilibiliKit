@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		522A74731F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
 		522A74741F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
 		522A74751F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
 		522A74761F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
 		522A74771F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */; };
-		523C7BB61F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BB71F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BB81F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BB91F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
 		523C7BBA1F15EC56006DADAB /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C7BB51F15EC56006DADAB /* S2BEmitter.swift */; };
-		52ECC4191F129B4B00879573 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC4181F129B4B00879573 /* main.swift */; };
 		52ECC4661F12A9C600879573 /* Srt2BilibiliKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52ECC4681F12A9C600879573 /* S2BDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmaku.swift */; };
 		52ECC4691F12A9C600879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
@@ -42,35 +39,17 @@
 		52ECC4A61F12C67200879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
 		52ECC4A71F12C67300879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
 		52ECC4A81F12C67300879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
-		52ECC4AB1F12C73900879573 /* S2BDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40C1F129B1800879573 /* S2BDanmaku.swift */; };
-		52ECC4AC1F12C73900879573 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */; };
-		52ECC4AD1F12C73900879573 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41D1F129D5800879573 /* S2BSubtitle.swift */; };
-		52ECC4AF1F12C73900879573 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC48E1F12B78000879573 /* S2BVideo.swift */; };
-		52ECC4B01F12C73900879573 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ECC41F1F12A39E00879573 /* S2BCookie.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		52ECC4141F129B4B00879573 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2BPostableDanmaku.swift; sourceTree = "<group>"; };
 		523C7BB41F15DE17006DADAB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		523C7BB51F15EC56006DADAB /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
+		52E932DD1F16CD6800532818 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Srt2BilibiliKit.h; sourceTree = "<group>"; };
 		52ECC4051F129A3600879573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52ECC40C1F129B1800879573 /* S2BDanmaku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2BDanmaku.swift; sourceTree = "<group>"; };
 		52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S2BSubRipFile.swift; sourceTree = "<group>"; };
-		52ECC4161F129B4B00879573 /* s2bkit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = s2bkit; sourceTree = BUILT_PRODUCTS_DIR; };
-		52ECC4181F129B4B00879573 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		52ECC41D1F129D5800879573 /* S2BSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubtitle.swift; sourceTree = "<group>"; };
 		52ECC41F1F12A39E00879573 /* S2BCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BCookie.swift; sourceTree = "<group>"; };
 		52ECC4371F12A93F00879573 /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,13 +60,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52ECC4131F129B4B00879573 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52ECC4331F12A93F00879573 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,32 +91,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		523C7BBB1F15ED49006DADAB /* srt */ = {
-			isa = PBXGroup;
-			children = (
-				52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */,
-				52ECC41D1F129D5800879573 /* S2BSubtitle.swift */,
-			);
-			path = srt;
-			sourceTree = "<group>";
-		};
-		523C7BBC1F15ED54006DADAB /* bilibili */ = {
-			isa = PBXGroup;
-			children = (
-				52ECC41F1F12A39E00879573 /* S2BCookie.swift */,
-				52ECC48E1F12B78000879573 /* S2BVideo.swift */,
-				52ECC40C1F129B1800879573 /* S2BDanmaku.swift */,
-				522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */,
-			);
-			path = bilibili;
-			sourceTree = "<group>";
-		};
 		52ECC3F71F129A3500879573 = {
 			isa = PBXGroup;
 			children = (
 				523C7BB41F15DE17006DADAB /* README.md */,
-				52ECC4031F129A3600879573 /* Srt2BilibiliKit */,
-				52ECC4171F129B4B00879573 /* Srt2BilibiliKit-cli */,
+				52E932DD1F16CD6800532818 /* Package.swift */,
+				52ECC4031F129A3600879573 /* Sources */,
 				52ECC4021F129A3600879573 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,7 +104,6 @@
 		52ECC4021F129A3600879573 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52ECC4161F129B4B00879573 /* s2bkit */,
 				52ECC4371F12A93F00879573 /* Srt2BilibiliKit.framework */,
 				52ECC4441F12A94B00879573 /* Srt2BilibiliKit.framework */,
 				52ECC4511F12A95800879573 /* Srt2BilibiliKit.framework */,
@@ -161,25 +112,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52ECC4031F129A3600879573 /* Srt2BilibiliKit */ = {
+		52ECC4031F129A3600879573 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				52ECC4041F129A3600879573 /* Srt2BilibiliKit.h */,
 				52ECC4051F129A3600879573 /* Info.plist */,
-				523C7BBB1F15ED49006DADAB /* srt */,
-				523C7BBC1F15ED54006DADAB /* bilibili */,
+				52ECC40D1F129B1800879573 /* S2BSubRipFile.swift */,
+				52ECC41D1F129D5800879573 /* S2BSubtitle.swift */,
+				52ECC41F1F12A39E00879573 /* S2BCookie.swift */,
+				52ECC48E1F12B78000879573 /* S2BVideo.swift */,
+				52ECC40C1F129B1800879573 /* S2BDanmaku.swift */,
+				522A74721F1692A500896B06 /* S2BPostableDanmaku.swift */,
 				523C7BB51F15EC56006DADAB /* S2BEmitter.swift */,
 			);
-			path = Srt2BilibiliKit;
-			sourceTree = "<group>";
-		};
-		52ECC4171F129B4B00879573 /* Srt2BilibiliKit-cli */ = {
-			isa = PBXGroup;
-			children = (
-				52ECC4181F129B4B00879573 /* main.swift */,
-			);
-			name = "Srt2BilibiliKit-cli";
-			path = "Apps/Srt2BilibiliKit-cli";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,23 +166,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		52ECC4151F129B4B00879573 /* Srt2BilibiliKit-cli */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52ECC41A1F129B4B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-cli" */;
-			buildPhases = (
-				52ECC4121F129B4B00879573 /* Sources */,
-				52ECC4131F129B4B00879573 /* Frameworks */,
-				52ECC4141F129B4B00879573 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Srt2BilibiliKit-cli";
-			productName = "Srt2BilibiliKit-cli";
-			productReference = 52ECC4161F129B4B00879573 /* s2bkit */;
-			productType = "com.apple.product-type.tool";
-		};
 		52ECC4361F12A93F00879573 /* Srt2BilibiliKit-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52ECC43C1F12A93F00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-iOS" */;
@@ -320,9 +249,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = WWITDC;
 				TargetAttributes = {
-					52ECC4151F129B4B00879573 = {
-						CreatedOnToolsVersion = 9.0;
-					};
 					52ECC4361F12A93F00879573 = {
 						CreatedOnToolsVersion = 9.0;
 					};
@@ -349,7 +275,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52ECC4151F129B4B00879573 /* Srt2BilibiliKit-cli */,
 				52ECC4361F12A93F00879573 /* Srt2BilibiliKit-iOS */,
 				52ECC4431F12A94B00879573 /* Srt2BilibiliKit-watchOS */,
 				52ECC4501F12A95800879573 /* Srt2BilibiliKit-tvOS */,
@@ -390,21 +315,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		52ECC4121F129B4B00879573 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52ECC4191F129B4B00879573 /* main.swift in Sources */,
-				52ECC4AF1F12C73900879573 /* S2BVideo.swift in Sources */,
-				52ECC4AC1F12C73900879573 /* S2BSubRipFile.swift in Sources */,
-				52ECC4AB1F12C73900879573 /* S2BDanmaku.swift in Sources */,
-				523C7BB61F15EC56006DADAB /* S2BEmitter.swift in Sources */,
-				522A74731F1692A500896B06 /* S2BPostableDanmaku.swift in Sources */,
-				52ECC4B01F12C73900879573 /* S2BCookie.swift in Sources */,
-				52ECC4AD1F12C73900879573 /* S2BSubtitle.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52ECC4321F12A93F00879573 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,30 +485,6 @@
 			};
 			name = Release;
 		};
-		52ECC41B1F129B4B00879573 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				FRAMEWORK_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = s2bkit;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		52ECC41C1F129B4B00879573 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				FRAMEWORK_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = s2bkit;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 		52ECC43D1F12A93F00879573 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -607,7 +493,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -627,7 +513,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -648,7 +534,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-watchOS";
@@ -670,7 +556,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-watchOS";
@@ -691,7 +577,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-tvOS";
@@ -712,7 +598,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wwitdc.apollozhu.Srt2BilibiliKit-tvOS";
@@ -735,7 +621,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -757,7 +643,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Srt2BilibiliKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -777,15 +663,6 @@
 			buildConfigurations = (
 				52ECC4071F129A3600879573 /* Debug */,
 				52ECC4081F129A3600879573 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52ECC41A1F129B4B00879573 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit-cli" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52ECC41B1F129B4B00879573 /* Debug */,
-				52ECC41C1F129B4B00879573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

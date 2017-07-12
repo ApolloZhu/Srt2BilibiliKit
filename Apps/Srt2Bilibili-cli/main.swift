@@ -72,11 +72,9 @@ var mode = [Int]()
 var pool = [Int]()
 var delay = S2BEmitter.bilibiliDelay
 
-#if DEBUG
-let arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
-#else
+//let arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
 let arguments = CommandLine.arguments
-#endif
+
 guard arguments.count > 1 else { exitAfterPrintingUsage() }
 var index = 1
 
