@@ -8,8 +8,8 @@
 
 import Foundation
 
+/// Danmaku "poster"
 public final class S2BEmitter {
-    
     /// Default emitter.
     public static let `default` = S2BEmitter()
     
@@ -20,7 +20,7 @@ public final class S2BEmitter {
     
     /// Suggested cool time between sending danmaku in seconds.
     /// Number smaller than the default may result in ban or failure.
-    public static let defaultDelay = 3.5
+    public static let defaultDelay: Double = 3.5
     
     /// Initalize a S2BEmitter with specified cookie and delay.
     ///
@@ -75,68 +75,25 @@ public final class S2BEmitter {
                     this.isPosting = false
                     guard id > 0
                         else { completionHandler?(.refused(danmaku: postable, id: id));return }
-                    this.verify(id, ofCID: postable.cid) { isValid in
-                        if isValid { completionHandler?(.success(danmaku: postable, id: id)) }
-                        else { completionHandler?(.refused(danmaku: postable, id: id)) }
-                    }
+                    completionHandler?(.success(danmaku: postable, id: id))
                 }
             }
             task.resume()
         }
     }
-    
-    public typealias ValidationCompletionHandler = (Bool) -> Void
-    
-    private func verify(_ id: Int, ofCID cid: Int, isValid handler: @escaping ValidationCompletionHandler) {
-        let url = URL(string: "https://comment.bilibili.com/\(cid).xml")!
-        let parser = XMLParser(contentsOf: url)!
-        let delegate = ParsingDelegate(target: id, handler: handler)
-        parser.delegate = delegate
-        parser.parse()
-    }
-    
-    /*
-     <i>
-     <chatserver>chat.bilibili.com</chatserver>
-     <chatid>14855219</chatid>
-     <mission>0</mission>
-     <maxlimit>8000</maxlimit>
-     <source>k-v</source>
-     <d p="946.86199951172,1,25,16777215,1494981458,0,f9c4a4cd,3366547626">1. MVC see other MVCs as Views.</d>
-     ...
-     </i>
-     */
-    private class ParsingDelegate: NSObject, XMLParserDelegate {
-        private let targetID: Int
-        private let completionHandler: ValidationCompletionHandler
-        public init(target id: Int, handler: @escaping ValidationCompletionHandler) {
-            self.targetID = id
-            self.completionHandler = handler
-        }
-        
-        private var didFindTarget = false
-        
-        func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-            if elementName == "d",
-                let rawID = attributeDict["p"]?.split(separator: ",").last,
-                let did = Int("\(rawID)"),
-                did == targetID {
-                didFindTarget = true
-                completionHandler(true)
-                parser.abortParsing()
-            }
-        }
-        
-        func parserDidEndDocument(_ parser: XMLParser) {
-            if !didFindTarget { completionHandler(false) }
-        }
-    }
 }
 
 public extension S2BEmitter {
-    
+    /// Task to perform once a single danmaku was posted.
+    ///
+    /// - Parameter postable: danmaku posted.
     public typealias PostCompletionHandler = (_ postable: S2BPostableDanmaku) -> Void
     
+    /// Post a danmaku, auto retry if failed.
+    ///
+    /// - Parameters:
+    ///   - danmaku: danmaku to post.
+    ///   - completionHandler: task to perform once the danmaku was successfully posted.
     public func post(danmaku: S2BDanmaku, completionHandler: PostCompletionHandler? = nil) {
         func emit() {
             tryPost(danmaku: danmaku) { result in
@@ -147,9 +104,24 @@ public extension S2BEmitter {
         emit()
     }
     
+    /// Task to perform once a danmaku in the queue was posted.
+    ///
+    /// - Parameters:
+    ///   - postable: danmaku posted.
+    ///   - progress: object tracking the current progress.
     public typealias ProgressReportHandler = (_ postable: S2BPostableDanmaku, _ progress: Progress) -> Void
+    
+    /// Task to perform once completed.
     public typealias CompletionHandler = () -> Void
     
+    /// Post all contents within the subtile to video of given cid.
+    ///
+    /// - Parameters:
+    ///   - subtitle: subtitle to post.
+    ///   - cid: cid of the video to post to.
+    ///   - configs: configurations of danmakus.
+    ///   - updateHandler: task to perform once a danmaku was posted.
+    ///   - completionHandler: task to perform after all danmaku were posted.
     public func post(subtitle: S2BSubtitle, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var contents = subtitle.contents
         guard contents.count > 0 else { completionHandler?();return }
@@ -176,6 +148,14 @@ public extension S2BEmitter {
         emit()
     }
     
+    /// Post all contents within the file to video of given cid.
+    ///
+    /// - Parameters:
+    ///   - srt: SubRip file to post.
+    ///   - cid: cid of the video to post to.
+    ///   - configs: configurations of danmakus.
+    ///   - updateHandler: task to perform once a danmaku was posted.
+    ///   - completionHandler: task to perform after all danmaku were posted.
     public func post(srt: S2BSubRipFile, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var subs = srt.subtitles
         guard subs.count > 0 else { completionHandler?();return }
@@ -194,5 +174,4 @@ public extension S2BEmitter {
         }
         emit()
     }
-    
 }

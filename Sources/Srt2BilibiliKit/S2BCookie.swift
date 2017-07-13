@@ -14,10 +14,13 @@ public struct S2BCookie: Codable, CustomStringConvertible {
     /// Default S2BCookie as saved in a file named `bilicookies` at current working directory, which can be retrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py .
     public static var `default`: S2BCookie! = S2BCookie()
     
+    /// DedeUserID
     private let mid: Int
+    /// DedeUserID__ckMd5
     private let md5Sum: String
+    /// SESSDATA
     private let sessionData: String
-    
+
     enum CodingKeys: String, CodingKey {
         case mid = "DedeUserID"
         case md5Sum = "DedeUserID__ckMd5"

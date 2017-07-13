@@ -9,9 +9,13 @@
 import Foundation
 
 public struct S2BSubtitle {
+    /// Index of the subtitle.
     public let index: Int
+    /// Time when the subtitle appears.
     public let startTime: TimeInterval
+    /// Time when the subtitle disappears.
     public let endTime: TimeInterval
+    /// Actual content of the subtitle.
     public let contents: [String]
     
     public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: [String]) {
@@ -35,6 +39,10 @@ extension S2BSubtitle {
         self.endTime = S2BSubtitle.timeInterval(from: timestamps[1])
     }
     
+    /// Parsing SubRip timestamp to time interval
+    ///
+    /// - Parameter string: valid string timestamp
+    /// - Returns: non-negative time interval
     private static func timeInterval(from string: String) -> TimeInterval {
         let num = string.split(separator: ",")
             .flatMap { $0.split(separator: ":") }
@@ -44,6 +52,7 @@ extension S2BSubtitle {
 }
 
 extension S2BSubtitle: CustomStringConvertible {
+    /// SubRip representation of the subtitle
     public var description: String {
         return """
         \(index)
@@ -52,6 +61,10 @@ extension S2BSubtitle: CustomStringConvertible {
         """
     }
     
+    /// Convert time interval to SubRip timestamp format
+    ///
+    /// - Parameter interval: non-negative time interval to format
+    /// - Returns: valid string timestamp
     private static func string(from interval: TimeInterval) -> String {
         let h = Int(interval / 3600)
         var interval = interval.remainder(dividingBy: 3600)

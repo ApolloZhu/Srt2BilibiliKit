@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Basic information of a local danmaku
 public class S2BDanmaku {
     
     public init(_ danmaku: String, cid: Int, playTime: TimeInterval, config: Config) {

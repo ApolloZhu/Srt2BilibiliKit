@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Representing a .srt file
 public struct S2BSubRipFile {
     /// Subtitles within the srt file.
     public var subtitles = [S2BSubtitle]()
@@ -18,6 +19,7 @@ extension S2BSubRipFile {
     ///
     /// - Parameter content: content of a srt file.
     public init(content: String) {
+        /// Indicating what the next piece of information is
         enum ParsingState { case index, time, content }
         
         for part in content.components(separatedBy: "\n\n").lazy {
