@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Srt2BilibiliKit
 
 // MARK: Usage/Help
 
@@ -56,6 +57,7 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o 16777
 -w delay (default 4)
 \tCool time in seconds (time to wait before posting the next one).
 \tNumber smaller than the default may result in ban or failure.
+
 """
 
 func exitAfterPrintingUsage() -> Never { print(usage);exit(0) }
@@ -169,4 +171,4 @@ S2BVideo(av: aid).page(page) {
 // MARK: Wait
 
 // Enable indefinite execution to wait for asynchronous operation
-while true { }
+RunLoop.current.run()

@@ -1,0 +1,14 @@
+language: objective-c
+os: osx
+osx_image: xcode9.0
+language: generic
+sudo: required
+dist: trusty
+
+-before_install:
+  - gem install jazzy
+script:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
+after_success:
+  - sleep 5
+  - jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit

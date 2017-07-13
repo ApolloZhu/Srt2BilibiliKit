@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Srt2BilibiliKit",
+        "repositoryURL": "https://github.com/ApolloZhu/Srt2BilibiliKit",
+        "state": {
+          "branch": null,
+          "revision": "bd9952c3eab104f2c283da046a6ecb6dfc3a3168",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
