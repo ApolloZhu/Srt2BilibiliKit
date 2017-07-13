@@ -13,7 +13,7 @@ import Srt2BilibiliKit
 
 let usage = """
 
-usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o 16777215...] [-f 25...] [-m 4...] [-l 0...] [-w 4]
+usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2BDanmaku.Config.default.color)...] [-f \(S2BDanmaku.Config.default.fontSize.rawValue)...] [-m \(S2BDanmaku.Config.default.mode.rawValue)...] [-l \(S2BDanmaku.Config.default.pool.rawValue)...] [-w \(S2BEmitter.defaultDelay)]
 
 -h (optional)
 \tPrint the usage
@@ -28,18 +28,18 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o 16777
 \tThe page/part number.
 
 -c cookie (default ./bilicookies)
-\tThe path to the cookie file (required)
+\tThe path to the cookie file, requirement for posting danmaku
 \tRetrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py, has structure similar to
 \t
 \tDedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx
 
--o color (default 16777215)
-\tThe color of danmaku, represented in dec(16777215) or hex(0XFFFFFF).
+-o color (default \(S2BDanmaku.Config.default.color))
+\tThe color of danmaku, represented in dec(\(S2BDanmaku.Config.default.color)) or hex(0x\(String(format: "%x", S2BDanmaku.Config.default.color))).
 
--f fontSize (default 25)
+-f fontSize (default \(S2BDanmaku.Config.default.fontSize.rawValue))
 \tThe font size of danmaku.
 
--m mode (default 4)
+-m mode (default \(S2BDanmaku.Config.default.mode.rawValue))
 \tThe mode of danmaku.
 \t1: Normal
 \t4: Bottom
@@ -48,13 +48,13 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o 16777
 \t7: Special
 \t9: Advanced
 
--l pool (default 0)
+-l pool (default \(S2BDanmaku.Config.default.pool.rawValue))
 \tThe Danmaku Pool to use.
 \t0: Normal
 \t1: Subtitle (Suggested if you own the video)
 \t2: Special
 
--w delay (default 4)
+-w delay (default \(S2BEmitter.defaultDelay))
 \tCool time in seconds (time to wait before posting the next one).
 \tNumber smaller than the default may result in ban or failure.
 
@@ -72,7 +72,7 @@ var color = [Int]()
 var fontSize = [Int]()
 var mode = [Int]()
 var pool = [Int]()
-var delay = S2BEmitter.bilibiliDelay
+var delay = S2BEmitter.defaultDelay
 
 //let arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
 let arguments = CommandLine.arguments
@@ -108,19 +108,20 @@ while index < arguments.count {
         while hasNext() {
             var option = next()
             if option.hasPrefix("0x") { option.removeFirst(2) }
-            color.append(Int(option) ?? Int(option, radix: 16) ?? 0xffffff)
+            color.append(Int(option) ?? Int(option, radix: 16)
+                ?? S2BDanmaku.Config.default.color)
         }
     case "-f", "--font", "--size", "--fontsize":
         while hasNext() {
-            fontSize.append(Int(next()) ?? 25)
+            fontSize.append(Int(next()) ?? S2BDanmaku.Config.default.fontSize.rawValue)
         }
     case "-m", "--mode":
         while hasNext() {
-            mode.append(Int(next()) ?? 4)
+            mode.append(Int(next()) ?? S2BDanmaku.Config.default.mode.rawValue)
         }
     case "-l", "--pool":
         while hasNext() {
-            pool.append(Int(next()) ?? 0)
+            pool.append(Int(next()) ?? S2BDanmaku.Config.default.pool.rawValue)
         }
     case "-w", "--cooltime", "--delay":
         delay = Double(next()) ?? delay
@@ -137,10 +138,10 @@ guard let cookie = S2BCookie(path: cookie) else { fatalError("Unable to load coo
 
 // MARK: Zip Configs
 
-if color.count == 0 { color = [0xffffff] }
-if fontSize.count == 0 { fontSize = [25] }
-if mode.count == 0 { mode = [4] }
-if pool.count == 0 { pool = [0] }
+if color.count == 0 { color = [S2BDanmaku.Config.default.color] }
+if fontSize.count == 0 { fontSize = [S2BDanmaku.Config.default.fontSize.rawValue] }
+if mode.count == 0 { mode = [S2BDanmaku.Config.default.mode.rawValue] }
+if pool.count == 0 { pool = [S2BDanmaku.Config.default.pool.rawValue] }
 
 func gcd(_ m: Int, _ n: Int) -> Int { return n == 0 ? m : gcd(n, m % n) }
 func lcm(_ m: Int, _ n: Int) -> Int { return m * n / gcd(m, n) }

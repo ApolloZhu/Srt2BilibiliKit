@@ -38,7 +38,7 @@
 		OBJ_18 /* S2BVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BVideo.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		"Srt2Bilibili-cli::Srt2Bilibili-cli::Product" /* Srt2Bilibili-cli */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Srt2Bilibili-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Srt2Bilibili-cli::Srt2Bilibili-cli::Product" /* Srt2Bilibili-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "Srt2Bilibili-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -102,7 +102,6 @@
 				OBJ_10 /* Dependencies */,
 				OBJ_19 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -171,7 +170,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,7 +229,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = "Srt2Bilibili-cli";
 			};
 			name = Debug;
@@ -249,7 +248,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = "Srt2Bilibili-cli";
 			};
 			name = Release;
@@ -293,7 +292,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = Srt2BilibiliKit;
 			};
 			name = Debug;
@@ -315,7 +314,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGET_NAME = Srt2BilibiliKit;
 			};
 			name = Release;
