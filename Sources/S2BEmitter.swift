@@ -114,17 +114,22 @@ public final class S2BEmitter {
             self.completionHandler = handler
         }
         
+        private var didFindTarget = false
+        
         func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
             if elementName == "d",
                 let rawID = attributeDict["p"]?.split(separator: ",").last,
                 let did = Int("\(rawID)"),
                 did == targetID {
-                parser.abortParsing()
+                didFindTarget = true
                 completionHandler(true)
+                parser.abortParsing()
             }
         }
         
-        func parserDidEndDocument(_ parser: XMLParser) { completionHandler(false) }
+        func parserDidEndDocument(_ parser: XMLParser) {
+            if !didFindTarget { completionHandler(false) }
+        }
     }
 }
 

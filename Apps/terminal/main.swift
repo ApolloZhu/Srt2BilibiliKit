@@ -9,6 +9,12 @@
 import Foundation
 import Srt2BilibiliKit
 
+// MARK: Arguments
+
+var arguments: [String]
+arguments = CommandLine.arguments
+//arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
+
 // MARK: Usage/Help
 
 let usage = """
@@ -29,7 +35,8 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2B
 
 -c cookie (default ./bilicookies)
 \tThe path to the cookie file, requirement for posting danmaku
-\tRetrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py, has structure similar to
+\tRetrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py,
+\thas structure similar to
 \t
 \tDedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx
 
@@ -62,7 +69,7 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2B
 
 func exitAfterPrintingUsage() -> Never { print(usage);exit(0) }
 
-// MARK: Parse
+// MARK: Parse Arguments
 
 var aid: Int?
 var srt: String?
@@ -73,9 +80,6 @@ var fontSize = [Int]()
 var mode = [Int]()
 var pool = [Int]()
 var delay = S2BEmitter.defaultDelay
-
-//let arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
-let arguments = CommandLine.arguments
 
 guard arguments.count > 1 else { exitAfterPrintingUsage() }
 var index = 1
@@ -169,7 +173,6 @@ S2BVideo(av: aid).page(page) {
     }) { exit(0) }
 }
 
-// MARK: Wait
-
+// MARK: Wait Till Finish
 // Enable indefinite execution to wait for asynchronous operation
 RunLoop.current.run()
