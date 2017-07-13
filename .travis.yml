@@ -5,10 +5,9 @@ language: generic
 sudo: required
 dist: trusty
 
--before_install:
+before_script:
   - gem install jazzy
 script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
-after_success:
-  - sleep 5
+after_script:
   - jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
