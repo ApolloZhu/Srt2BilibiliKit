@@ -8,7 +8,7 @@ script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
 
 before_deploy:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/jazzy.sh)"
+  - sh jazzy.sh
 
 deploy:
   provider: pages
