@@ -1,14 +1,14 @@
-language: generic
 os: osx
+language: generic
 osx_image: xcode9
 sudo: required
 dist: trusty
 
 script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
-after_script:
-  - gem install jazzy
-  - jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
+
+before_deploy:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/jazzy.sh)"
 
 deploy:
   provider: pages
