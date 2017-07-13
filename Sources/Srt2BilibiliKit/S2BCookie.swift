@@ -63,7 +63,7 @@ public struct S2BCookie: Codable, CustomStringConvertible {
             else { return nil }
         self.init(DedeUserID: mid, DedeUserID__ckMd5: sum, SESSDATA: data)
     }
-
+    
     public var description: String {
         return "\(CodingKeys.mid.stringValue)=\(mid);\(CodingKeys.md5Sum.stringValue)=\(md5Sum);\(CodingKeys.sessionData.stringValue)=\(sessionData)"
     }
