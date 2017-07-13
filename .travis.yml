@@ -1,13 +1,18 @@
-language: objective-c
-os: osx
-osx_image: xcode9.0
 language: generic
+os: osx
+osx_image: xcode9
 sudo: required
 dist: trusty
 
-before_script:
-  - gem install jazzy
 script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
 after_script:
+  - gem install jazzy
   - jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
