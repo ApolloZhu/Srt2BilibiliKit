@@ -76,6 +76,7 @@ extension S2BSubRipFile {
 }
 
 extension S2BSubRipFile: CustomStringConvertible {
+    /// Convert back to what it would be like in a .srt file.
     public var description: String {
         return subtitles.map({ $0.description }).joined(separator: "\n")
     }

@@ -45,7 +45,7 @@ public struct S2BVideo {
     ///
     /// - Parameter code: code to perform on the pages.
     public func pages(code: @escaping PagesHandler) {
-        URLSession.shared.dataTask(with: URL(string: "http://www.bilibili.com/widget/getPageList?aid=\(aid)")!) { (data, _, _) in
+        S2B.kit.urlSession.dataTask(with: URL(string: "http://www.bilibili.com/widget/getPageList?aid=\(aid)")!) { (data, _, _) in
             guard let data = data, let pages = try? JSONDecoder().decode([Page].self, from: data), pages.count > 0 else { return code(nil) }
             code(pages)
             }.resume()
