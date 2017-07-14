@@ -9,18 +9,17 @@ echo "Ubuntu Swift $VERSION ($DATE) Development Snapshot Installer";
 
 # Determine OS
 UNAME=`uname`;
-if [[ $UNAME == "Darwin" ]];
-then
-    OS="macOS";
+if [[ $UNAME == "Darwin" ]]; then
+    OS="macOS"
 else
     if [[ $UNAME == "Linux" ]]; then
         UBUNTU_RELEASE=`lsb_release -a 2>/dev/null`;
         if [[ $UBUNTU_RELEASE == *"16.10"* ]]; then
-            OS="ubuntu1610";
+            OS="ubuntu1610"
         elif [[ $UBUNTU_RELEASE == *"16.04"* ]]; then
-            OS="ubuntu1604";
+            OS="ubuntu1604"
         else
-            OS="ubuntu1404";
+            OS="ubuntu1404"
         fi
     else
         echo "Unsupported Operating System: $UNAME";
@@ -32,24 +31,26 @@ if [[ $OS != "macOS" ]]; then
     echo "📚 Installing Dependencies"
     sudo apt-get install -y clang libicu-dev
 
-    echo "🐦 Installing Swift";
+    echo "🐦 Installing Swift"
     PREFIX="swift-$VERSION-DEVELOPMENT-SNAPSHOT-$DATE-a"
     if [[ $OS == "ubuntu1610" ]]; then
-        SWIFTFILE="$PREFIX-ubuntu16.10";
+        SWIFTFILE="$PREFIX-ubuntu16.10"
     elif [[ $OS == "ubuntu1604" ]]; then
-        SWIFTFILE="$PREFIX-ubuntu16.04";
+        SWIFTFILE="$PREFIX-ubuntu16.04"
     else
-        SWIFTFILE="$PREFIX-ubuntu14.04";
+        SWIFTFILE="$PREFIX-ubuntu14.04"
     fi
     BINLINK="https://swift.org/builds/swift-$VERSION-branch/$OS/$PREFIX/$SWIFTFILE.tar.gz"
-    if swiftenv 2>/dev/null; then
+    if hash swiftenv 2>/dev/null; then
+        echo "⚠️  Using swiftenv"
         swiftenv install $BINLINK
     else
         wget $BINLINK
         tar -zxf $SWIFTFILE.tar.gz
         export PATH=$PWD/$SWIFTFILE/usr/bin:"${PATH}"
         echo "export PATH=$PWD/$SWIFTFILE/usr/bin:"\${PATH}"" >> ~/.bashrc
+        echo "✅ Done"
     fi
 fi
 
-echo "📅 Version: `swift --version`";
+echo "📅  Version: `swift --version`"
