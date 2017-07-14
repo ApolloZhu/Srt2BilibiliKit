@@ -13,7 +13,7 @@ class Srt2BilibiliKitTests: XCTestCase {
             XCTAssertEqual(page!.cid, 14848859, "Wrong cid")
             goal.fulfill()
         }
-        wait(for: [goal], timeout: 20)
+        waitForExpectations(timeout: 20, handler: nil)
     }
 
     static let allTests = [
