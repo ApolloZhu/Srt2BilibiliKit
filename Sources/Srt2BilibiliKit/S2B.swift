@@ -7,9 +7,8 @@
 
 #if os(Linux) || os(Android) || os(Windows)
     import Glibc
-#else
-    import Darwin
 #endif
+import Foundation
 
 /// Container for global stuff
 struct S2B {
@@ -34,4 +33,11 @@ struct S2B {
             return Int(arc4random_uniform(UInt32(max)))
         #endif
     }
+
+    #if os(Linux) || os(Android) || os(Windows)
+    let urlSession = URLSession()
+    #else
+    var urlSession: URLSession { return URLSession.shared }
+    #endif
+
 }

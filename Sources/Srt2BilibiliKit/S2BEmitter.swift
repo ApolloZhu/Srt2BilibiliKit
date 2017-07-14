@@ -68,7 +68,7 @@ public final class S2BEmitter {
             request.httpMethod = "POST"
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
             request.addValue(cookie.description, forHTTPHeaderField: "Cookie")
-            let task = URLSession.shared.dataTask(with: request) { [delay] (data, response, error) in
+            let task = S2B.kit.urlSession.dataTask(with: request) { [delay] (data, response, error) in
                 DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
                     guard let this = self, error == nil, let datium = data,
                         let content = String(data: datium, encoding: .utf8), let id = Int(content)
