@@ -36,15 +36,14 @@ public class S2BPostableDanmaku: S2BDanmaku, CustomStringConvertible {
         let postable = S2BPostableDanmaku(raw)
         return (postable, "\(postable)".data(using: .utf8))
     }
-    
+
     /// String representation of post request body
     public var description: String {
-        let random = Int(arc4random_uniform(100000))
         let date: String = {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             return formatter.string(from: self.date)
         }()
-        return "fontsize=\(config.fontSize.rawValue)&message=\(content)&mode=\(config.mode.rawValue)&pool=\(config.pool.rawValue)&color=\(config.color)&date=\(date)&rnd=\(random)&playTime=\(playTime)&cid=\(cid)"
+        return "fontsize=\(config.fontSize.rawValue)&message=\(content)&mode=\(config.mode.rawValue)&pool=\(config.pool.rawValue)&color=\(config.color)&date=\(date)&rnd=\(S2B.kit.random())&playTime=\(playTime)&cid=\(cid)"
     }
 }

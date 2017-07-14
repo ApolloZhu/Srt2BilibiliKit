@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Dispatch
 
 /// Danmaku "poster"
 public final class S2BEmitter {

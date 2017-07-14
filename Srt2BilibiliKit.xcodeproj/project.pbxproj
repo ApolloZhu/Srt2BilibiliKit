@@ -16,7 +16,7 @@
             "en",
          );
          mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_22";
+         productRefGroup = "OBJ_23";
          projectDirPath = ".";
          targets = (
             "Srt2BilibiliKit::Srt2Bilibili-cli",
@@ -27,61 +27,57 @@
       };
       "OBJ_10" = {
          isa = "PBXFileReference";
-         path = "S2BDanmaku.swift";
+         path = "S2BCookie.swift";
          sourceTree = "<group>";
       };
       "OBJ_11" = {
          isa = "PBXFileReference";
-         path = "S2BEmitter.swift";
+         path = "S2BDanmaku.swift";
          sourceTree = "<group>";
       };
       "OBJ_12" = {
          isa = "PBXFileReference";
-         path = "S2BPostableDanmaku.swift";
+         path = "S2BEmitter.swift";
          sourceTree = "<group>";
       };
       "OBJ_13" = {
          isa = "PBXFileReference";
-         path = "S2BPostedDanmaku.swift";
+         path = "S2BPostableDanmaku.swift";
          sourceTree = "<group>";
       };
       "OBJ_14" = {
          isa = "PBXFileReference";
-         path = "S2BSubRipFile.swift";
+         path = "S2BPostedDanmaku.swift";
          sourceTree = "<group>";
       };
       "OBJ_15" = {
          isa = "PBXFileReference";
-         path = "S2BSubtitle.swift";
+         path = "S2BSubRipFile.swift";
          sourceTree = "<group>";
       };
       "OBJ_16" = {
          isa = "PBXFileReference";
-         path = "S2BVideo.swift";
+         path = "S2BSubtitle.swift";
          sourceTree = "<group>";
       };
       "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "S2BVideo.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_18",
+            "OBJ_19",
          );
          name = "Srt2Bilibili-cli";
          path = "Sources/Srt2Bilibili-cli";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_18" = {
+      "OBJ_19" = {
          isa = "PBXFileReference";
          path = "main.swift";
          sourceTree = "<group>";
-      };
-      "OBJ_19" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_20",
-         );
-         name = "Tests";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_2" = {
          isa = "XCConfigurationList";
@@ -97,16 +93,25 @@
          children = (
             "OBJ_21",
          );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_21" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_22",
+         );
          name = "Srt2BilibiliKitTests";
          path = "Tests/Srt2BilibiliKitTests";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_21" = {
+      "OBJ_22" = {
          isa = "PBXFileReference";
          path = "Srt2BilibiliKitTests.swift";
          sourceTree = "<group>";
       };
-      "OBJ_22" = {
+      "OBJ_23" = {
          isa = "PBXGroup";
          children = (
             "Srt2BilibiliKit::Srt2Bilibili-cli::Product",
@@ -117,42 +122,14 @@
          path = "";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
-      "OBJ_27" = {
+      "OBJ_28" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_28",
             "OBJ_29",
+            "OBJ_30",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Debug";
-      };
-      "OBJ_28" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Srt2Bilibili-cli";
-         };
-         name = "Debug";
       };
       "OBJ_29" = {
          isa = "XCBuildConfiguration";
@@ -180,7 +157,7 @@
             SWIFT_VERSION = "4.0";
             TARGET_NAME = "Srt2Bilibili-cli";
          };
-         name = "Release";
+         name = "Debug";
       };
       "OBJ_3" = {
          isa = "XCBuildConfiguration";
@@ -215,42 +192,8 @@
          name = "Debug";
       };
       "OBJ_30" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_31",
-         );
-      };
-      "OBJ_31" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
-      };
-      "OBJ_32" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_33",
-         );
-      };
-      "OBJ_33" = {
-         isa = "PBXBuildFile";
-         fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product";
-      };
-      "OBJ_34" = {
-         isa = "PBXTargetDependency";
-         target = "Srt2BilibiliKit::Srt2BilibiliKit";
-      };
-      "OBJ_37" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_38",
-            "OBJ_39",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_38" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -258,10 +201,10 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
             );
-            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist";
+            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path",
             );
             OTHER_LDFLAGS = (
                "$(inherited)",
@@ -269,10 +212,45 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)",
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Srt2BilibiliKitTests";
+            TARGET_NAME = "Srt2Bilibili-cli";
          };
-         name = "Debug";
+         name = "Release";
+      };
+      "OBJ_31" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_32",
+         );
+      };
+      "OBJ_32" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_33" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_34",
+         );
+      };
+      "OBJ_34" = {
+         isa = "PBXBuildFile";
+         fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product";
+      };
+      "OBJ_35" = {
+         isa = "PBXTargetDependency";
+         target = "Srt2BilibiliKit::Srt2BilibiliKit";
+      };
+      "OBJ_38" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_39",
+            "OBJ_40",
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
       };
       "OBJ_39" = {
          isa = "XCBuildConfiguration";
@@ -299,7 +277,7 @@
             SWIFT_VERSION = "4.0";
             TARGET_NAME = "Srt2BilibiliKitTests";
          };
-         name = "Release";
+         name = "Debug";
       };
       "OBJ_4" = {
          isa = "XCBuildConfiguration";
@@ -332,42 +310,9 @@
          name = "Release";
       };
       "OBJ_40" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_41",
-         );
-      };
-      "OBJ_41" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_21";
-      };
-      "OBJ_42" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_43",
-         );
-      };
-      "OBJ_43" = {
-         isa = "PBXBuildFile";
-         fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product";
-      };
-      "OBJ_44" = {
-         isa = "PBXTargetDependency";
-         target = "Srt2BilibiliKit::Srt2BilibiliKit";
-      };
-      "OBJ_45" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_46",
-            "OBJ_47",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_46" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -375,9 +320,10 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
             );
-            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist";
+            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks",
             );
             OTHER_LDFLAGS = (
                "$(inherited)",
@@ -385,14 +331,43 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)",
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "Srt2BilibiliKit";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Srt2BilibiliKit";
+            TARGET_NAME = "Srt2BilibiliKitTests";
          };
-         name = "Debug";
+         name = "Release";
+      };
+      "OBJ_41" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_42",
+         );
+      };
+      "OBJ_42" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_43" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_44",
+         );
+      };
+      "OBJ_44" = {
+         isa = "PBXBuildFile";
+         fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product";
+      };
+      "OBJ_45" = {
+         isa = "PBXTargetDependency";
+         target = "Srt2BilibiliKit::Srt2BilibiliKit";
+      };
+      "OBJ_46" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_47",
+            "OBJ_48",
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
       };
       "OBJ_47" = {
          isa = "XCBuildConfiguration";
@@ -422,12 +397,41 @@
             SWIFT_VERSION = "4.0";
             TARGET_NAME = "Srt2BilibiliKit";
          };
-         name = "Release";
+         name = "Debug";
       };
       "OBJ_48" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+            );
+            INFOPLIST_FILE = "Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Srt2BilibiliKit";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "Srt2BilibiliKit";
+         };
+         name = "Release";
+      };
+      "OBJ_49" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_49",
             "OBJ_50",
             "OBJ_51",
             "OBJ_52",
@@ -435,64 +439,61 @@
             "OBJ_54",
             "OBJ_55",
             "OBJ_56",
+            "OBJ_57",
+            "OBJ_58",
          );
-      };
-      "OBJ_49" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_9";
       };
       "OBJ_5" = {
          isa = "PBXGroup";
          children = (
             "OBJ_6",
             "OBJ_7",
-            "OBJ_19",
-            "OBJ_22",
+            "OBJ_20",
+            "OBJ_23",
          );
          path = "";
          sourceTree = "<group>";
       };
       "OBJ_50" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_10";
+         fileRef = "OBJ_9";
       };
       "OBJ_51" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_11";
+         fileRef = "OBJ_10";
       };
       "OBJ_52" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_12";
+         fileRef = "OBJ_11";
       };
       "OBJ_53" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_13";
+         fileRef = "OBJ_12";
       };
       "OBJ_54" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
+         fileRef = "OBJ_13";
       };
       "OBJ_55" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_15";
+         fileRef = "OBJ_14";
       };
       "OBJ_56" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
+         fileRef = "OBJ_15";
       };
       "OBJ_57" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
+      };
+      "OBJ_58" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_59" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
          );
-      };
-      "OBJ_59" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_60",
-            "OBJ_61",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
       };
       "OBJ_6" = {
          isa = "PBXFileReference";
@@ -500,19 +501,28 @@
          path = "Package.swift";
          sourceTree = "<group>";
       };
-      "OBJ_60" = {
+      "OBJ_61" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_62",
+            "OBJ_63",
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
+      };
+      "OBJ_62" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
          };
          name = "Debug";
       };
-      "OBJ_61" = {
+      "OBJ_63" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
          };
          name = "Release";
       };
-      "OBJ_62" = {
+      "OBJ_64" = {
          isa = "PBXTargetDependency";
          target = "Srt2BilibiliKit::Srt2BilibiliKitTests";
       };
@@ -520,7 +530,7 @@
          isa = "PBXGroup";
          children = (
             "OBJ_8",
-            "OBJ_17",
+            "OBJ_18",
          );
          name = "Sources";
          path = "";
@@ -537,6 +547,7 @@
             "OBJ_14",
             "OBJ_15",
             "OBJ_16",
+            "OBJ_17",
          );
          name = "Srt2BilibiliKit";
          path = "Sources/Srt2BilibiliKit";
@@ -544,18 +555,18 @@
       };
       "OBJ_9" = {
          isa = "PBXFileReference";
-         path = "S2BCookie.swift";
+         path = "S2B.swift";
          sourceTree = "<group>";
       };
       "Srt2BilibiliKit::Srt2Bilibili-cli" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_27";
+         buildConfigurationList = "OBJ_28";
          buildPhases = (
-            "OBJ_30",
-            "OBJ_32",
+            "OBJ_31",
+            "OBJ_33",
          );
          dependencies = (
-            "OBJ_34",
+            "OBJ_35",
          );
          name = "Srt2Bilibili-cli";
          productName = "Srt2Bilibili_cli";
@@ -569,10 +580,10 @@
       };
       "Srt2BilibiliKit::Srt2BilibiliKit" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_45";
+         buildConfigurationList = "OBJ_46";
          buildPhases = (
-            "OBJ_48",
-            "OBJ_57",
+            "OBJ_49",
+            "OBJ_59",
          );
          dependencies = (
          );
@@ -588,24 +599,24 @@
       };
       "Srt2BilibiliKit::Srt2BilibiliKitPackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_59";
+         buildConfigurationList = "OBJ_61";
          buildPhases = (
          );
          dependencies = (
-            "OBJ_62",
+            "OBJ_64",
          );
          name = "Srt2BilibiliKitPackageTests";
          productName = "Srt2BilibiliKitPackageTests";
       };
       "Srt2BilibiliKit::Srt2BilibiliKitTests" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_37";
+         buildConfigurationList = "OBJ_38";
          buildPhases = (
-            "OBJ_40",
-            "OBJ_42",
+            "OBJ_41",
+            "OBJ_43",
          );
          dependencies = (
-            "OBJ_44",
+            "OBJ_45",
          );
          name = "Srt2BilibiliKitTests";
          productName = "Srt2BilibiliKitTests";

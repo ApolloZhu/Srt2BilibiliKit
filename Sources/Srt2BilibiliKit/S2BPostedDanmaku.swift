@@ -64,6 +64,4 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
         guard let id = Int(parts[7]) else { return nil }
         self.init(content, cid: cid, playTime: playTime, rgb: color, fontSize: size, mode: mode, pool: pool, date: date, sender: sender, id: id)
     }
-    
-    
 }
