@@ -5,6 +5,7 @@ language: generic
 osx_image: xcode9
 # blog.travis-ci.com/2017-07-11-trusty-as-default-linux-is-coming
 # sudo: required
+dist: trusty
 
 before_script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-swift)"
