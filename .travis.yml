@@ -17,7 +17,6 @@ after_script:
 
 before_deploy:
   - sh sh/jazzy
-
 deploy:
   provider: pages
   skip_cleanup: true
@@ -25,3 +24,4 @@ deploy:
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
+    condition: $TRAVIS_OS_NAME = osx
