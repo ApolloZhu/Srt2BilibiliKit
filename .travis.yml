@@ -1,10 +1,15 @@
-os: osx
+os:
+- osx
+- linux
 language: generic
 osx_image: xcode9
 sudo: required
 dist: trusty
 
+before_script:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-swift.sh)"
 script:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/ci.sh)"
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
 
 before_deploy:
