@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Representing a .srt file
+/// A .srt file
 public struct S2BSubRipFile {
     /// Subtitles within the srt file.
     public var subtitles = [S2BSubtitle]()

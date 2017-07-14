@@ -18,9 +18,10 @@ arguments = CommandLine.arguments
 // MARK: Usage/Help
 
 let usage = """
-
 usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2BDanmaku.Config.default.color)...] [-f \(S2BDanmaku.Config.default.fontSize.rawValue)...] [-m \(S2BDanmaku.Config.default.mode.rawValue)...] [-l \(S2BDanmaku.Config.default.pool.rawValue)...] [-w \(S2BEmitter.defaultDelay)]
+"""
 
+let help = """
 -h (optional)
 \tPrint the usage
 
@@ -67,7 +68,8 @@ usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2B
 
 """
 
-func exitAfterPrintingUsage() -> Never { print(usage);exit(0) }
+func exitAfterPrintingHelp() -> Never { print(usage);exit(0) }
+func exitAfterPrintingUsage() -> Never { print(usage+"\n"+help);exit(0) }
 
 // MARK: Parse Arguments
 
@@ -81,7 +83,7 @@ var mode = [Int]()
 var pool = [Int]()
 var delay = S2BEmitter.defaultDelay
 
-guard arguments.count > 1 else { exitAfterPrintingUsage() }
+guard arguments.count > 1 else { exitAfterPrintingHelp() }
 var index = 1
 
 func hasNext() -> Bool {

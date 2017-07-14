@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "🚀 Downloading...";
+rm -rf Srt2BilibiliKit
 git clone https://github.com/ApolloZhu/Srt2BilibiliKit.git
 if [[ $? != 0 ]]; then 
     echo "❌ Failed to download";
@@ -22,15 +23,22 @@ fi
 echo "🗑  Clean up...";
 cp .build/release/Srt2Bilibili-cli /usr/local/bin/s2bkit
 if [[ $? != 0 ]]; then 
-    cp .build/release/Srt2Bilibili-cli s2bkit
+    cp .build/release/Srt2Bilibili-cli ../s2bkit
+    MODE="LIMITED";
 fi
 cd ..
 rm -rf Srt2BilibiliKit
 
-echo "📚 s2bkit --help"
+if [[ $MODE == "LIMITED" ]]; then
+    export PATH=$PWD:"${PATH}"
+    chmod +x s2bkit
+fi
 s2bkit
 if [[ $? != 0 ]]; then 
     echo "❌ Failed to execute";
     exit 1;
 fi
-echo "✅ Done!"
+echo "✅ Done!";
+if [[ $MODE == "LIMITED" ]]; then
+    echo "⚠️  Adding $PWD to your \$PATH is recommended";
+fi

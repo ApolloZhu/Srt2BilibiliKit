@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// A segment of a .srt file.
 public struct S2BSubtitle {
     /// Index of the subtitle.
     public let index: Int
@@ -17,7 +18,14 @@ public struct S2BSubtitle {
     public let endTime: TimeInterval
     /// Actual content of the subtitle.
     public let contents: [String]
-    
+
+    /// Initialize a subtitle with given information.
+    ///
+    /// - Parameters:
+    ///   - index: the index of the subtitle.
+    ///   - start: time of which the subtitle appears.
+    ///   - end: time of which the subtitle disappears.
+    ///   - contents: the actual content of the subtitle.
     public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: [String]) {
         self.index = index
         self.startTime = start
@@ -25,12 +33,25 @@ public struct S2BSubtitle {
         self.contents = contents
     }
     
+    /// Initialize a subtitle with given information.
+    ///
+    /// - Parameters:
+    ///   - index: the index of the subtitle.
+    ///   - start: time of which the subtitle appears.
+    ///   - end: time of which the subtitle disappears.
+    ///   - contents: the actual content of the subtitle.
     public init(index: Int, from start: TimeInterval, to end: TimeInterval, contents: String...) {
         self.init(index: index, from: start, to: end, contents: contents)
     }
 }
 
 extension S2BSubtitle {
+    /// Initialize a subtitle by parsing timestamp string.
+    ///
+    /// - Parameters:
+    ///   - index: Index of the subtitle.
+    ///   - time: String of format: start --> end.
+    ///   - contents: Actual content of the subtitle.
     init(index: Int, time: String, contents: [String]) {
         self.index = index
         self.contents = contents
@@ -39,10 +60,10 @@ extension S2BSubtitle {
         self.endTime = S2BSubtitle.timeInterval(from: timestamps[1])
     }
     
-    /// Parsing SubRip timestamp to time interval
+    /// Parsing SubRip timestamp to time interval.
     ///
-    /// - Parameter string: valid string timestamp
-    /// - Returns: non-negative time interval
+    /// - Parameter string: valid string timestamp.
+    /// - Returns: non-negative time interval.
     private static func timeInterval(from string: String) -> TimeInterval {
         let num = string.split(separator: ",")
             .flatMap { $0.split(separator: ":") }
@@ -52,7 +73,7 @@ extension S2BSubtitle {
 }
 
 extension S2BSubtitle: CustomStringConvertible {
-    /// SubRip representation of the subtitle
+    /// SubRip representation of the subtitle.
     public var description: String {
         return """
         \(index)
@@ -61,10 +82,10 @@ extension S2BSubtitle: CustomStringConvertible {
         """
     }
     
-    /// Convert time interval to SubRip timestamp format
+    /// Convert time interval to SubRip timestamp format.
     ///
-    /// - Parameter interval: non-negative time interval to format
-    /// - Returns: valid string timestamp
+    /// - Parameter interval: non-negative time interval to format.
+    /// - Returns: valid string timestamp.
     private static func string(from interval: TimeInterval) -> String {
         let h = Int(interval / 3600)
         var interval = interval.remainder(dividingBy: 3600)
