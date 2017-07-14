@@ -8,12 +8,12 @@ osx_image: xcode9
 dist: trusty
 
 before_script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-swift)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/install)"
 script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/ci)"
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-cmd)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/ci)"
+  - sh sh/install-cmd
 after_script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/codecov)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/package/v4/codecov)"
 
 before_deploy:
   - sh sh/jazzy
