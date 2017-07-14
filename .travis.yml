@@ -1,19 +1,21 @@
 os:
-- osx
-- linux
+  - osx
+  - linux
 language: generic
 osx_image: xcode9
 sudo: required
 dist: trusty
 
 before_script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-swift.sh)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-swift)"
 script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/ci.sh)"
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/install-cmd.sh)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/ci)"
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-cmd)"
+after_script:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/codecov)"
 
 before_deploy:
-  - sh jazzy.sh
+  - sh sh/jazzy
 
 deploy:
   provider: pages
