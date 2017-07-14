@@ -41,9 +41,15 @@ if [[ $OS != "macOS" ]]; then
     else
         SWIFTFILE="$PREFIX-ubuntu14.04";
     fi
-    wget https://swift.org/builds/swift-$VERSION-branch/$OS/$PREFIX/$SWIFTFILE.tar.gz
-    tar -zxf $SWIFTFILE.tar.gz
-    export PATH=$PWD/$SWIFTFILE/usr/bin:"${PATH}"
+    BINLINK="https://swift.org/builds/swift-$VERSION-branch/$OS/$PREFIX/$SWIFTFILE.tar.gz"
+    if swiftenv 2>/dev/null; then
+        swiftenv install $BINLINK
+    else
+        wget $BINLINK
+        tar -zxf $SWIFTFILE.tar.gz
+        export PATH=$PWD/$SWIFTFILE/usr/bin:"${PATH}"
+        echo "export PATH=$PWD/$SWIFTFILE/usr/bin:"\${PATH}"" >> ~/.bashrc
+    fi
 fi
 
 echo "📅 Version: `swift --version`";

@@ -2,19 +2,14 @@
 # Modified based on github.com/onevcat/Swift-CI
 # (which was stolen from vapor).
 
-echo "Swift Package CodeCov Integration";
+echo "SPM V4 CodeCov Integration";
 
 # Determine OS
 UNAME=`uname`;
-if [[ $UNAME == "Darwin" ]];
-then
-    OS="macOS";
-else
+if [[ $UNAME != "Darwin" ]]; then
     echo "🚫  Unsupported OS: $UNAME, skipping...";
     exit 0;
 fi
-echo "🖥  Operating System: $OS";
-
 
 PROJ_OUTPUT=`swift package generate-xcodeproj`;
 PROJ_NAME="${PROJ_OUTPUT/generated: .\//}"
