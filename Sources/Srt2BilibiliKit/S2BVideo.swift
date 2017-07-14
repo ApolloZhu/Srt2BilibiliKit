@@ -89,12 +89,24 @@ public struct S2BVideo {
 }
 
 extension S2BVideo: Equatable {
+    /// Check if two videos are the same.
+    ///
+    /// - Parameters:
+    ///   - lhs: A video.
+    ///   - rhs: Another video.
+    /// - Returns: true if they have the same aid, false otherwise.
     public static func ==(lhs: S2BVideo, rhs: S2BVideo) -> Bool {
         return lhs.aid == rhs.aid
     }
 }
 
 extension S2BVideo.Page: Equatable {
+    /// Check if two video pages are the same.
+    ///
+    /// - Parameters:
+    ///   - lhs: A page of a video.
+    ///   - rhs: Another page, of the same or another video.
+    /// - Returns: true if they have the same cid, false otherwise.
     public static func ==(lhs: S2BVideo.Page, rhs: S2BVideo.Page) -> Bool {
         return lhs.cid == rhs.cid
     }

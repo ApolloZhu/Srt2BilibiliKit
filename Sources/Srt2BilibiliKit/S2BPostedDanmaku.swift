@@ -15,7 +15,7 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
     /// Unique identifier of the danmaku
     public let id: Int
     
-    public init(_ danmaku: String, cid: Int, playTime: TimeInterval, config: Config = .default, date: Date, sender: Int, id: Int) {
+    public init(_ danmaku: String, cid: Int, playTime: TimeInterval, config: Config, date: Date, sender: Int, id: Int) {
         self.sender = sender
         self.id = id
         super.init(danmaku, cid: cid, playTime: playTime, config: config)

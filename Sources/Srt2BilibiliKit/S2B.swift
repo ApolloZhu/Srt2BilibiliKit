@@ -35,10 +35,10 @@ struct S2B {
     }
     
     #if os(Linux) || os(Android) || os(Windows)
-    /// Shared url session
+    /// Shared url session, replacement for URLSession.shared
     let urlSession = URLSession(configuration: .default)
     #else
-    /// Shared url session
+    /// Shared url session, alias of URLSession.shared
     var urlSession: URLSession { return URLSession.shared }
     #endif
     
