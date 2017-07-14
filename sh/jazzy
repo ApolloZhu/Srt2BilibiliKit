@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo gem install jazzy
+jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
 if [[ $? != 0 ]]; then 
     echo "It's fine to not be jazzy";
     exit 0;
 fi
-jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
