@@ -5,7 +5,7 @@
 VERSION="4.0"
 DATE="2017-07-11"
 
-echo "Swift $VERSION ($DATE) Development Snapshot Installation";
+echo "Ubuntu Swift $VERSION ($DATE) Development Snapshot Installer";
 
 # Determine OS
 UNAME=`uname`;
@@ -13,8 +13,7 @@ if [[ $UNAME == "Darwin" ]];
 then
     OS="macOS";
 else
-    if [[ $UNAME == "Linux" ]];
-    then
+    if [[ $UNAME == "Linux" ]]; then
         UBUNTU_RELEASE=`lsb_release -a 2>/dev/null`;
         if [[ $UBUNTU_RELEASE == *"16.10"* ]]; then
             OS="ubuntu1610";
@@ -29,8 +28,7 @@ else
 fi
 echo "🖥  Operating System: $OS";
 
-if [[ $OS != "macOS" ]];
-then
+if [[ $OS != "macOS" ]]; then
     echo "📚 Installing Dependencies"
     sudo apt-get install -y clang libicu-dev
 

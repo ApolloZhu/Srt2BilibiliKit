@@ -1,9 +1,36 @@
 #!/bin/sh
+echo "🚀 Downloading...";
 git clone https://github.com/ApolloZhu/Srt2BilibiliKit.git
+if [[ $? != 0 ]]; then 
+    echo "❌ Failed to download";
+    exit 1;
+fi
 cd Srt2BilibiliKit
+
+echo "🛠  Building...";
 swift package clean
+if [[ $? != 0 ]]; then 
+    echo "❌ Failed to build";
+    exit 1;
+fi
 swift build -c release
+if [[ $? != 0 ]]; then 
+    echo "❌ Failed to build";
+    exit 1;
+fi
+
+echo "🗑  Clean up...";
 cp .build/release/Srt2Bilibili-cli /usr/local/bin/s2bkit
+if [[ $? != 0 ]]; then 
+    cp .build/release/Srt2Bilibili-cli s2bkit
+fi
 cd ..
 rm -rf Srt2BilibiliKit
+
+echo "📚 s2bkit --help"
 s2bkit
+if [[ $? != 0 ]]; then 
+    echo "❌ Failed to execute";
+    exit 1;
+fi
+echo "✅ Done!"
