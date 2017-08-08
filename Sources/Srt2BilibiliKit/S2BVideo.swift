@@ -30,6 +30,11 @@ public struct S2BVideo {
         /// Unique identifier of the page
         public let cid: Int
         
+        /// Coding keys to use when encoding to other formats
+        ///
+        /// - page: page
+        /// - cid: cid
+        /// - pageName: pagename
         enum CodingKeys: String, CodingKey {
             case page, cid
             case pageName = "pagename"

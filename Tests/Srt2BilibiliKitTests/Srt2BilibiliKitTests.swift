@@ -1,5 +1,6 @@
 import XCTest
 @testable import Srt2BilibiliKit
+import Dispatch
 
 class Srt2BilibiliKitTests: XCTestCase {
 
@@ -16,7 +17,18 @@ class Srt2BilibiliKitTests: XCTestCase {
         waitForExpectations(timeout: 20, handler: nil)
     }
 
+    func testAllDanmakuFetching() {
+        let goal = expectation(description: "Video danmaku fetch")
+        S2BPostedDanmaku.allDanmaku(ofCID: 14848859) {
+            XCTAssertNotEqual($0.count, 0, "No danmaku fetched")
+            print($0)
+            goal.fulfill()
+        }
+        waitForExpectations(timeout: 30, handler: nil)
+    }
+
     static let allTests = [
         ("testVideoPageFetching", testVideoPageFetching),
+        ("testAllDanmakuFetching", testAllDanmakuFetching)
     ]
 }

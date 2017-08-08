@@ -33,19 +33,23 @@ public final class S2BEmitter {
         self.delay = delay
     }
     
-    /// Result after trying to post danmaku
+    /// Result after trying to post a danmaku.
     ///
-    /// - success: danmaku was successfully posted
-    /// - refused: bilibili refused to accept the posted danmaku
-    /// - aborted: something else went wrong
+    /// - success: danmaku was successfully posted.
+    /// - refused: bilibili refused to accept the postable danmaku.
+    /// - aborted: something else went wrong.
     public enum Result {
-        case success(danmaku: S2BPostableDanmaku, id: Int)
+        case success(posted: S2BPostedDanmaku)
         case refused(danmaku: S2BPostableDanmaku, id: Int)
         case aborted(danmaku: S2BPostableDanmaku, data: Data?, error: Error?)
     }
-    
-    public typealias FailablePostCompletionHandler = (Result) -> Void
-    
+
+    /// To handle result after tring to post a danmaku.
+    ///
+    /// - Parameter result: result after trying to post a danmaku.
+    public typealias FailablePostCompletionHandler = (_ result: Result) -> Void
+
+    /// To keep track of the current state.
     private var isPosting = false
     
     /*
@@ -55,6 +59,12 @@ public final class S2BEmitter {
      try:
      r = requests.post(url, data = payload, headers = headers, cookies=cookie)
      */
+    
+    /// Try to post a danmaku.
+    ///
+    /// - Parameters:
+    ///   - danmaku: danmaku to post.
+    ///   - completionHandler: task to perform once tried.
     public func tryPost(danmaku: S2BDanmaku, completionHandler: FailablePostCompletionHandler? = nil) {
         if isPosting {
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
@@ -76,7 +86,7 @@ public final class S2BEmitter {
                     this.isPosting = false
                     guard id > 0
                         else { completionHandler?(.refused(danmaku: postable, id: id));return }
-                    completionHandler?(.success(danmaku: postable, id: id))
+                    completionHandler?(.success(posted: S2BPostedDanmaku.byAssigning(postable, id: id)))
                 }
             }
             task.resume()
@@ -88,7 +98,7 @@ public extension S2BEmitter {
     /// Task to perform once a single danmaku was posted.
     ///
     /// - Parameter postable: danmaku posted.
-    public typealias PostCompletionHandler = (_ postable: S2BPostableDanmaku) -> Void
+    public typealias PostCompletionHandler = (_ posted: S2BPostedDanmaku) -> Void
     
     /// Post a danmaku, auto retry if failed.
     ///
@@ -98,8 +108,8 @@ public extension S2BEmitter {
     public func post(danmaku: S2BDanmaku, completionHandler: PostCompletionHandler? = nil) {
         func emit() {
             tryPost(danmaku: danmaku) { result in
-                guard case let .success(postable, _) = result else { return emit() }
-                completionHandler?(postable)
+                guard case let .success(posted) = result else { return emit() }
+                completionHandler?(posted)
             }
         }
         emit()
@@ -110,10 +120,12 @@ public extension S2BEmitter {
     /// - Parameters:
     ///   - postable: danmaku posted.
     ///   - progress: object tracking the current progress.
-    public typealias ProgressReportHandler = (_ postable: S2BPostableDanmaku, _ progress: Progress) -> Void
+    public typealias ProgressReportHandler = (_ posted: S2BPostedDanmaku, _ progress: Progress) -> Void
     
     /// Task to perform once completed.
-    public typealias CompletionHandler = () -> Void
+    ///
+    /// - Parameter posted: all danmaku posted.
+    public typealias CompletionHandler = (_ posted: [S2BPostedDanmaku]) -> Void
     
     /// Post all contents within the subtile to video of given cid.
     ///
@@ -125,7 +137,7 @@ public extension S2BEmitter {
     ///   - completionHandler: task to perform after all danmaku were posted.
     public func post(subtitle: S2BSubtitle, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var contents = subtitle.contents
-        guard contents.count > 0 else { completionHandler?();return }
+        guard contents.count > 0 else { completionHandler?([]);return }
         var progress = Progress(totalUnitCount: Int64(contents.count))
         var configs = configs.count < 1 ? [S2BDanmaku.Config.default] : configs
         if contents.count > configs.count {
@@ -136,11 +148,13 @@ public extension S2BEmitter {
         }
         var danmaku = contents.removeFirst()
         var config = configs.removeFirst()
+        var allPosted = [S2BPostedDanmaku]()
         func emit() {
-            post(danmaku: S2BDanmaku(danmaku, cid: cid, playTime: subtitle.startTime, config: config)) { postable in
+            post(danmaku: S2BDanmaku(danmaku, cid: cid, playTime: subtitle.startTime, config: config)) { posted in
                 progress.completedUnitCount += 1
-                updateHandler?(postable, progress)
-                guard contents.count > 0 else { completionHandler?();return }
+                allPosted.append(posted)
+                updateHandler?(posted, progress)
+                guard contents.count > 0 else { completionHandler?(allPosted);return }
                 danmaku = contents.removeFirst()
                 config = configs.removeFirst()
                 emit()
@@ -159,15 +173,15 @@ public extension S2BEmitter {
     ///   - completionHandler: task to perform after all danmaku were posted.
     public func post(srt: S2BSubRipFile, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var subs = srt.subtitles
-        guard subs.count > 0 else { completionHandler?();return }
+        guard subs.count > 0 else { completionHandler?([]);return }
         var progress = Progress(totalUnitCount: Int64(subs.count))
         var sub = subs.removeFirst()
         func emit() {
             progress.becomeCurrent(withPendingUnitCount: 1)
             post(subtitle: sub, toCID: cid, configs: configs,
-                 updateHandler: { postable, _ in updateHandler?(postable, progress) },
-                 completionHandler: {
-                    if subs.count < 1 { completionHandler?();return }
+                 updateHandler: { posted, progress in updateHandler?(posted, progress) },
+                 completionHandler: { posted in
+                    if subs.count < 1 { completionHandler?(posted);return }
                     sub = subs.removeFirst()
                     emit()
             })

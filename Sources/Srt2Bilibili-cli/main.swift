@@ -172,7 +172,7 @@ S2BVideo(av: aid).page(page) {
     let emitter = S2BEmitter(cookie: cookie, delay: delay)
     emitter.post(srt: subRip, toCID: cid, configs: configs, updateHandler: { danmaku, progress in
         print("\(String(format: "%7.3f%%", progress.fractionCompleted * 100)) \(danmaku.content)")
-    }) { exit(0) }
+    }) { _ in exit(0) }
 }
 
 // MARK: Wait Till Finish

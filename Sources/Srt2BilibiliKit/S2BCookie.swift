@@ -21,6 +21,11 @@ public struct S2BCookie: Codable, CustomStringConvertible {
     /// SESSDATA
     private let sessionData: String
 
+    /// Keys to use when encoding to other formats
+    ///
+    /// - mid: DedeUserID
+    /// - md5Sum: DedeUserID__ckMd5
+    /// - sessionData: SESSDATA
     enum CodingKeys: String, CodingKey {
         case mid = "DedeUserID"
         case md5Sum = "DedeUserID__ckMd5"
@@ -67,6 +72,7 @@ public struct S2BCookie: Codable, CustomStringConvertible {
         self.init(DedeUserID: mid, DedeUserID__ckMd5: sum, SESSDATA: data)
     }
     
+    /// Cookie in format of request header
     public var description: String {
         return "\(CodingKeys.mid.stringValue)=\(mid);\(CodingKeys.md5Sum.stringValue)=\(md5Sum);\(CodingKeys.sessionData.stringValue)=\(sessionData)"
     }
