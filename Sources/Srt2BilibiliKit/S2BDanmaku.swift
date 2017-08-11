@@ -88,11 +88,17 @@ public class S2BDanmaku {
         /// - special: 特殊弹幕 on bilibili.
         /// - advanced: 高级弹幕 on bilibili.
         public enum Mode: Int {
+            /// 滚动弹幕 (rolling) on bilibili.
             case normal = 1
+            /// 底部弹幕 on bilibili.
             case bottom = 4
+            /// 顶部弹幕 on bilibili.
             case top = 5
+            /// 逆向弹幕 on bilibili.
             case reversed = 6
+            /// 特殊弹幕 on bilibili.
             case special = 7
+            /// 高级弹幕 on bilibili.
             case advanced = 9
         }
         
@@ -103,6 +109,7 @@ public class S2BDanmaku {
         ///             字幕弹幕（要求发送者拥有视频的所有权）on bilibili.
         /// - special: 特殊弹幕 on bilibili.
         public enum Pool: Int {
+            /// See class reference.
             case normal = 0, subtitle, special
         }
         
@@ -116,7 +123,9 @@ public class S2BDanmaku {
         /// - FontSize.medium.rawValue:: 25.
         /// - FontSize.large.rawValue:: 36.
         public enum FontSize: RawRepresentable {
+            /// See class reference.
             case small, medium, large
+            /// Some user defined font size.
             case custom(Int)
             
             public typealias RawType = Int

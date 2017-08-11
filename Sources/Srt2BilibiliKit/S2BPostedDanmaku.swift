@@ -85,7 +85,7 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
         let url = URL(string: "https://comment.bilibili.com/\(cid).xml")!
         let parser = XMLParser(contentsOf: url)!
         parser.delegate = delegate
-        parser.parse()
+        let _ = parser.parse()
     }
 
     /*

@@ -39,8 +39,11 @@ public final class S2BEmitter {
     /// - refused: bilibili refused to accept the postable danmaku.
     /// - aborted: something else went wrong.
     public enum Result {
+        /// Danmaku was successfully posted.
         case success(posted: S2BPostedDanmaku)
+        /// Bilibili refused to accept the postable danmaku.
         case refused(danmaku: S2BPostableDanmaku, id: Int)
+        /// Something else went wrong.
         case aborted(danmaku: S2BPostableDanmaku, data: Data?, error: Error?)
     }
 
