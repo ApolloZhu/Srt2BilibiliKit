@@ -20,3 +20,8 @@ You should see the usage printed out. But before you can use `s2bkit`, there is 
 ### Get that Cookie!!
 
 Bilibili left some cookies after you login your account, and we need those cookies named `DedeUserID`, `DedeUserID__ckMd5`, and `SESSDATA` to send your danmaku. You should use [biliupload/getcookie.py](https://github.com/dantmnf/biliupload/blob/master/getcookie.py) by [@dantmnf](https://github.com/dantmnf) to pack them in a file  named `bilicookies`, and save it under current working directory.
+
+
+#### Privacy Policy
+
+Your cookie will only be used in the header section of POST requests when sending danmaku. They are not stored or used in any other ways.

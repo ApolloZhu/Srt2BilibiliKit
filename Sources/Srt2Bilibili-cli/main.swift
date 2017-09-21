@@ -149,7 +149,21 @@ if fontSize.count == 0 { fontSize = [S2BDanmaku.Config.default.fontSize.rawValue
 if mode.count == 0 { mode = [S2BDanmaku.Config.default.mode.rawValue] }
 if pool.count == 0 { pool = [S2BDanmaku.Config.default.pool.rawValue] }
 
+
+/// Find the greatest common divisor
+///
+/// - Parameters:
+///   - m: a number
+///   - n: another number
+/// - Returns: greatest common divisor of `m` and `n`
 func gcd(_ m: Int, _ n: Int) -> Int { return n == 0 ? m : gcd(n, m % n) }
+
+/// Find the least common multiple
+///
+/// - Parameters:
+///   - m: a number
+///   - n: another number
+/// - Returns: least common multiple of `m` and `n`
 func lcm(_ m: Int, _ n: Int) -> Int { return m * n / gcd(m, n) }
 
 let configCount = lcm(lcm(lcm(color.count, fontSize.count), mode.count), pool.count)

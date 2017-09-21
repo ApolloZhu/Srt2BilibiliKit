@@ -61,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5290C6E51F746CDB00947EB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../../apollonian/Documents/Git-Repo/Srt2BilibiliKit/README.md"; sourceTree = "<group>"; };
 		OBJ_10 /* S2BCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BCookie.swift; sourceTree = "<group>"; };
 		OBJ_11 /* S2BDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BDanmaku.swift; sourceTree = "<group>"; };
 		OBJ_12 /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
@@ -142,16 +143,16 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				5290C6E51F746CDB00947EB6 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_20 /* Tests */,
 				OBJ_23 /* sh */,
 				OBJ_24 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -248,7 +249,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
