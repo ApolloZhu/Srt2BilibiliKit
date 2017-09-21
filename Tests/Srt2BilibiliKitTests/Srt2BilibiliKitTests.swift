@@ -28,7 +28,6 @@ class Srt2BilibiliKitTests: XCTestCase {
     }
 
     static let allTests = [
-        ("testVideoPageFetching", testVideoPageFetching),
-        ("testAllDanmakuFetching", testAllDanmakuFetching)
+        ("testVideoPageFetching", testVideoPageFetching)
     ]
 }
