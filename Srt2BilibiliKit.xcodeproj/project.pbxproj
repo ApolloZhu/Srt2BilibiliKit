@@ -62,6 +62,9 @@
 
 /* Begin PBXFileReference section */
 		5290C6E51F746CDB00947EB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../../apollonian/Documents/Git-Repo/Srt2BilibiliKit/README.md"; sourceTree = "<group>"; };
+		5290C6E61F74712600947EB6 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = "../../../../apollonian/Documents/Git-Repo/Srt2BilibiliKit/.travis.yml"; sourceTree = "<group>"; };
+		5290C6E71F74713B00947EB6 /* .codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .codecov.yml; path = "../../../../apollonian/Documents/Git-Repo/Srt2BilibiliKit/.codecov.yml"; sourceTree = "<group>"; };
+		5290C6E81F74714400947EB6 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-version"; path = "../../../../apollonian/Documents/Git-Repo/Srt2BilibiliKit/.swift-version"; sourceTree = "<group>"; };
 		OBJ_10 /* S2BCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BCookie.swift; sourceTree = "<group>"; };
 		OBJ_11 /* S2BDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BDanmaku.swift; sourceTree = "<group>"; };
 		OBJ_12 /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
@@ -147,9 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				5290C6E51F746CDB00947EB6 /* README.md */,
+				5290C6E81F74714400947EB6 /* .swift-version */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_20 /* Tests */,
+				5290C6E61F74712600947EB6 /* .travis.yml */,
+				5290C6E71F74713B00947EB6 /* .codecov.yml */,
 				OBJ_23 /* sh */,
 				OBJ_24 /* Products */,
 			);
