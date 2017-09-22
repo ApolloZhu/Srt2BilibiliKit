@@ -13,7 +13,6 @@ import Srt2BilibiliKit
 
 var arguments: [String]
 arguments = CommandLine.arguments
-//arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
 
 // MARK: Usage/Help
 
@@ -142,13 +141,14 @@ guard let aid = aid else { fatalError("AV number is REQUIRED") }
 guard let path = srt, var subRip = S2BSubRipFile(path: path) else { fatalError("Path to srt file is REQUIRED") }
 guard let cookie = S2BCookie(path: cookie) else { fatalError("Unable to load cookie") }
 
-// MARK: Zip Configs
+// MARK: Default Configs
 
 if color.count == 0 { color = [S2BDanmaku.Config.default.color] }
 if fontSize.count == 0 { fontSize = [S2BDanmaku.Config.default.fontSize.rawValue] }
 if mode.count == 0 { mode = [S2BDanmaku.Config.default.mode.rawValue] }
 if pool.count == 0 { pool = [S2BDanmaku.Config.default.pool.rawValue] }
 
+// MARK: Zip Configs
 
 /// Find the greatest common divisor
 ///

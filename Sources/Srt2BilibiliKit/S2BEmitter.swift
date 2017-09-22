@@ -182,7 +182,7 @@ public extension S2BEmitter {
         func emit() {
             progress.becomeCurrent(withPendingUnitCount: 1)
             post(subtitle: sub, toCID: cid, configs: configs,
-                 updateHandler: { posted, progress in updateHandler?(posted, progress) },
+                 updateHandler: { posted, _ /*sub progress*/ in updateHandler?(posted, progress) },
                  completionHandler: { posted in
                     if subs.count < 1 { completionHandler?(posted);return }
                     sub = subs.removeFirst()
