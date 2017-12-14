@@ -60,49 +60,49 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52B3EE111FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE1B1FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swift_qrcodejs::swift_qrcodejs";
 			remoteInfo = swift_qrcodejs;
 		};
-		52B3EE121FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE1C1FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Srt2BilibiliKit::Srt2BilibiliKit";
 			remoteInfo = Srt2BilibiliKit;
 		};
-		52B3EE131FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE1D1FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
 			remoteInfo = BilibiliKit;
 		};
-		52B3EE141FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE1E1FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
 			remoteInfo = BilibiliKit;
 		};
-		52B3EE151FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE1F1FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Srt2BilibiliKit::Srt2BilibiliKit";
 			remoteInfo = Srt2BilibiliKit;
 		};
-		52B3EE161FE211F7004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE201FE217C6004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
 			remoteInfo = BilibiliKit;
 		};
-		52B3EE171FE211F8004F4E23 /* PBXContainerItemProxy */ = {
+		52B3EE211FE217C7004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -589,37 +589,37 @@
 		OBJ_116 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */;
-			targetProxy = 52B3EE151FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE1F1FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_117 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
-			targetProxy = 52B3EE161FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE201FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_132 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
-			targetProxy = 52B3EE131FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE1D1FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_144 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Srt2BilibiliKit::Srt2BilibiliKitTests" /* Srt2BilibiliKitTests */;
-			targetProxy = 52B3EE171FE211F8004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE211FE217C7004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swift_qrcodejs::swift_qrcodejs" /* swift_qrcodejs */;
-			targetProxy = 52B3EE111FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE1B1FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */;
-			targetProxy = 52B3EE121FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE1C1FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 		OBJ_85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
-			targetProxy = 52B3EE141FE211F7004F4E23 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE1E1FE217C6004F4E23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
