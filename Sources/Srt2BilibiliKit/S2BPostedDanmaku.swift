@@ -99,7 +99,7 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
      ...
      </i>
      */
-    /// Parser for danmaku in xml format, as returned by the bilibili server.
+    /// TODO: Parser for danmaku in xml format, as returned by the bilibili server.
     private class DanmakuXMLParserDelegate: NSObject, XMLParserDelegate {
         var handler: AllDanmakuHandler!
         var cid: Int!

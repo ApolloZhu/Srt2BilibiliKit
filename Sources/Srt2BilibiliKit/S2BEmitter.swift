@@ -43,7 +43,7 @@ public final class S2BEmitter {
         /// Danmaku was successfully posted.
         case success(posted: S2BPostedDanmaku)
         /// Bilibili refused to accept the postable danmaku.
-        case refused(danmaku: S2BPostableDanmaku, id: Int)
+        case refused(danmaku: S2BPostableDanmaku, message: String, code: Int)
         /// Something else went wrong.
         case aborted(danmaku: S2BPostableDanmaku, data: Data?, error: Error?)
     }
@@ -76,25 +76,45 @@ public final class S2BEmitter {
             }
         } else {
             isPosting = true
-            var request = URLRequest(url: URL(string: "http://interface.bilibili.com/dmpost")!)
+            var request = URLRequest(url: URL(string: "http://interface.bilibili.com/dmpost?ct=1")!)
             let (postable, data) = S2BPostableDanmaku.byEncoding(danmaku)
             request.httpBody = data
             request.httpMethod = "POST"
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
             request.addValue(cookie.asHeaderField, forHTTPHeaderField: "Cookie")
             let task = S2B.kit.urlSession.dataTask(with: request) { [delay] (data, response, error) in
+                guard let handle = completionHandler else { return }
                 DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
-                    guard let this = self, error == nil, let datium = data,
-                        let content = String(data: datium, encoding: .utf8), let id = Int(content)
-                        else { completionHandler?(.aborted(danmaku: postable, data: data, error: error));return }
-                    this.isPosting = false
-                    guard id > 0
-                        else { completionHandler?(.refused(danmaku: postable, id: id));return }
-                    completionHandler?(.success(posted: S2BPostedDanmaku.byAssigning(postable, id: id)))
+                    if let this = self, error == nil, let datium = data {
+                        this.isPosting = false
+                        let decoder = JSONDecoder()
+                        if let result = try? decoder.decode(Success.self, from: datium), result.code == 0 {
+                            return handle(.success(posted: S2BPostedDanmaku.byAssigning(postable, id: result.dmid)))
+                        } else if let result = try? JSONDecoder().decode(Failure.self, from: datium) {
+                            return handle(.refused(danmaku: postable, message: result.message, code: result.code))
+                        }
+                    }
+                    handle(.aborted(danmaku: postable, data: data, error: error))
                 }
             }
             task.resume()
         }
+    }
+    
+    private struct Success: Codable {
+        /// Should always be 0
+        let code: Int
+        /// ID assigned to this posted danmaku.
+        let dmid: Int
+    }
+    
+    private struct Failure: Codable {
+        /// Some negative number informing the error state.
+        let code: Int
+        /// Error message in Simplified Chinese.
+        let message: String
+        /// I don't care what this is.
+        let ts: Int
     }
 }
 
@@ -112,8 +132,14 @@ public extension S2BEmitter {
     public func post(danmaku: S2BDanmaku, completionHandler: PostCompletionHandler? = nil) {
         func emit() {
             tryPost(danmaku: danmaku) { result in
-                guard case let .success(posted) = result else { return emit() }
-                completionHandler?(posted)
+                switch result {
+                case .success(posted: let posted):
+                    completionHandler?(posted)
+                case .refused(danmaku: let danmaku, message: let message, code: _):
+                    fatalError("\(message): \(danmaku.content)")
+                case .aborted:
+                    emit()
+                }
             }
         }
         emit()
@@ -183,7 +209,7 @@ public extension S2BEmitter {
         func emit() {
             progress.becomeCurrent(withPendingUnitCount: 1)
             post(subtitle: sub, toCID: cid, configs: configs,
-                 updateHandler: { posted, progress in updateHandler?(posted, progress) },
+                 updateHandler: { posted, _ /*sub progress*/ in updateHandler?(posted, progress) },
                  completionHandler: { posted in
                     if subs.count < 1 { completionHandler?(posted);return }
                     sub = subs.removeFirst()

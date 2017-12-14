@@ -17,3 +17,7 @@ eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/mas
 ```
 
 You should see the usage printed out.
+
+### Privacy Policy
+
+Your cookie will only be used in the header section of POST requests when sending danmaku. They are not stored or used in any other ways.
