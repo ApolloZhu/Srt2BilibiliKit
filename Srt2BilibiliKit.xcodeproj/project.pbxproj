@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Srt2BilibiliKit::Srt2BilibiliKitPackageTests::ProductTarget" /* Srt2BilibiliKitPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_62 /* Build configuration list for PBXAggregateTarget "Srt2BilibiliKitPackageTests" */;
+			buildConfigurationList = OBJ_141 /* Build configuration list for PBXAggregateTarget "Srt2BilibiliKitPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_65 /* PBXTargetDependency */,
+				OBJ_144 /* PBXTargetDependency */,
 			);
 			name = Srt2BilibiliKitPackageTests;
 			productName = Srt2BilibiliKitPackageTests;
@@ -21,37 +21,88 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* main.swift */; };
-		OBJ_35 /* Srt2BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */; };
-		OBJ_43 /* Srt2BilibiliKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Srt2BilibiliKitTests.swift */; };
-		OBJ_45 /* Srt2BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */; };
-		OBJ_51 /* S2B.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* S2B.swift */; };
-		OBJ_52 /* S2BCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* S2BCookie.swift */; };
-		OBJ_53 /* S2BDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* S2BDanmaku.swift */; };
-		OBJ_54 /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* S2BEmitter.swift */; };
-		OBJ_55 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* S2BPostableDanmaku.swift */; };
-		OBJ_56 /* S2BPostedDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* S2BPostedDanmaku.swift */; };
-		OBJ_57 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* S2BSubRipFile.swift */; };
-		OBJ_58 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* S2BSubtitle.swift */; };
-		OBJ_59 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* S2BVideo.swift */; };
+		OBJ_100 /* QRMaskPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* QRMaskPattern.swift */; };
+		OBJ_101 /* QRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* QRMath.swift */; };
+		OBJ_102 /* QRMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* QRMode.swift */; };
+		OBJ_103 /* QRPatternLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* QRPatternLocator.swift */; };
+		OBJ_104 /* QRPolynomial.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* QRPolynomial.swift */; };
+		OBJ_105 /* QRRSBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* QRRSBlock.swift */; };
+		OBJ_112 /* Srt2BilibiliKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Srt2BilibiliKitTests.swift */; };
+		OBJ_114 /* Srt2BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */; };
+		OBJ_115 /* BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */; };
+		OBJ_122 /* S2B.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* S2B.swift */; };
+		OBJ_123 /* S2BDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* S2BDanmaku.swift */; };
+		OBJ_124 /* S2BEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* S2BEmitter.swift */; };
+		OBJ_125 /* S2BPostableDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* S2BPostableDanmaku.swift */; };
+		OBJ_126 /* S2BPostedDanmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* S2BPostedDanmaku.swift */; };
+		OBJ_127 /* S2BSubRipFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* S2BSubRipFile.swift */; };
+		OBJ_128 /* S2BSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* S2BSubtitle.swift */; };
+		OBJ_129 /* S2BVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* S2BVideo.swift */; };
+		OBJ_131 /* BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */; };
+		OBJ_137 /* BKCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* BKCookie.swift */; };
+		OBJ_138 /* BKLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* BKLogin.swift */; };
+		OBJ_58 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_64 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Package.swift */; };
+		OBJ_70 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Package.swift */; };
+		OBJ_76 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* main.swift */; };
+		OBJ_78 /* swift_qrcodejs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift_qrcodejs::swift_qrcodejs::Product" /* swift_qrcodejs.framework */; };
+		OBJ_79 /* Srt2BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */; };
+		OBJ_80 /* BilibiliKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */; };
+		OBJ_91 /* BCHUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* BCHUtil.swift */; };
+		OBJ_92 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Error.swift */; };
+		OBJ_93 /* QR8bitByte.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* QR8bitByte.swift */; };
+		OBJ_94 /* QRBitBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* QRBitBuffer.swift */; };
+		OBJ_95 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* QRCode.swift */; };
+		OBJ_96 /* QRCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* QRCodeModel.swift */; };
+		OBJ_97 /* QRCodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* QRCodeRenderer.swift */; };
+		OBJ_98 /* QRCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* QRCodeType.swift */; };
+		OBJ_99 /* QRErrorCorrectLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* QRErrorCorrectLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5294C17F1F19460400EF4858 /* PBXContainerItemProxy */ = {
+		52B3EE0A1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "swift_qrcodejs::swift_qrcodejs";
+			remoteInfo = swift_qrcodejs;
+		};
+		52B3EE0B1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Srt2BilibiliKit::Srt2BilibiliKit";
 			remoteInfo = Srt2BilibiliKit;
 		};
-		5294C1801F19460400EF4858 /* PBXContainerItemProxy */ = {
+		52B3EE0C1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
+			remoteInfo = BilibiliKit;
+		};
+		52B3EE0D1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
+			remoteInfo = BilibiliKit;
+		};
+		52B3EE0E1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Srt2BilibiliKit::Srt2BilibiliKit";
 			remoteInfo = Srt2BilibiliKit;
 		};
-		5294C1811F19462700EF4858 /* PBXContainerItemProxy */ = {
+		52B3EE0F1FE20DAE004F4E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BilibiliKit::BilibiliKit";
+			remoteInfo = BilibiliKit;
+		};
+		52B3EE101FE20DAF004F4E23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -61,83 +112,184 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		OBJ_10 /* S2BCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BCookie.swift; sourceTree = "<group>"; };
-		OBJ_11 /* S2BDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BDanmaku.swift; sourceTree = "<group>"; };
-		OBJ_12 /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
-		OBJ_13 /* S2BPostableDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BPostableDanmaku.swift; sourceTree = "<group>"; };
-		OBJ_14 /* S2BPostedDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BPostedDanmaku.swift; sourceTree = "<group>"; };
-		OBJ_15 /* S2BSubRipFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubRipFile.swift; sourceTree = "<group>"; };
-		OBJ_16 /* S2BSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubtitle.swift; sourceTree = "<group>"; };
-		OBJ_17 /* S2BVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BVideo.swift; sourceTree = "<group>"; };
-		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_22 /* Srt2BilibiliKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Srt2BilibiliKitTests.swift; sourceTree = "<group>"; };
-		OBJ_23 /* sh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sh; sourceTree = SOURCE_ROOT; };
+		"BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* S2BDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BDanmaku.swift; sourceTree = "<group>"; };
+		OBJ_11 /* S2BEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BEmitter.swift; sourceTree = "<group>"; };
+		OBJ_12 /* S2BPostableDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BPostableDanmaku.swift; sourceTree = "<group>"; };
+		OBJ_13 /* S2BPostedDanmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BPostedDanmaku.swift; sourceTree = "<group>"; };
+		OBJ_14 /* S2BSubRipFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubRipFile.swift; sourceTree = "<group>"; };
+		OBJ_15 /* S2BSubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BSubtitle.swift; sourceTree = "<group>"; };
+		OBJ_16 /* S2BVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2BVideo.swift; sourceTree = "<group>"; };
+		OBJ_18 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Srt2BilibiliKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Srt2BilibiliKitTests.swift; sourceTree = "<group>"; };
+		OBJ_22 /* sh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sh; sourceTree = SOURCE_ROOT; };
+		OBJ_26 /* BCHUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCHUtil.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_28 /* QR8bitByte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR8bitByte.swift; sourceTree = "<group>"; };
+		OBJ_29 /* QRBitBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBitBuffer.swift; sourceTree = "<group>"; };
+		OBJ_30 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		OBJ_31 /* QRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModel.swift; sourceTree = "<group>"; };
+		OBJ_32 /* QRCodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRenderer.swift; sourceTree = "<group>"; };
+		OBJ_33 /* QRCodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeType.swift; sourceTree = "<group>"; };
+		OBJ_34 /* QRErrorCorrectLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRErrorCorrectLevel.swift; sourceTree = "<group>"; };
+		OBJ_35 /* QRMaskPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMaskPattern.swift; sourceTree = "<group>"; };
+		OBJ_36 /* QRMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMath.swift; sourceTree = "<group>"; };
+		OBJ_37 /* QRMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMode.swift; sourceTree = "<group>"; };
+		OBJ_38 /* QRPatternLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPatternLocator.swift; sourceTree = "<group>"; };
+		OBJ_39 /* QRPolynomial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPolynomial.swift; sourceTree = "<group>"; };
+		OBJ_40 /* QRRSBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRRSBlock.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Apollonian/Documents/Git-Repo/Srt2BilibiliKit/.build/checkouts/swift_qrcodejs--3118771489649426200/Package.swift"; sourceTree = "<group>"; };
+		OBJ_44 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Apollonian/Documents/Git-Repo/Srt2BilibiliKit/.build/checkouts/BilibiliKit-9099041423531033350/Package.swift"; sourceTree = "<group>"; };
+		OBJ_45 /* BKCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCookie.swift; sourceTree = "<group>"; };
+		OBJ_46 /* BKLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKLogin.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* S2B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2B.swift; sourceTree = "<group>"; };
 		"Srt2BilibiliKit::Srt2Bilibili-cli::Product" /* Srt2Bilibili-cli */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Srt2Bilibili-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Srt2BilibiliKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Srt2BilibiliKit::Srt2BilibiliKitTests::Product" /* Srt2BilibiliKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = Srt2BilibiliKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"swift_qrcodejs::swift_qrcodejs::Product" /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_34 /* Frameworks */ = {
+		OBJ_106 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_35 /* Srt2BilibiliKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_44 /* Frameworks */ = {
+		OBJ_113 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_45 /* Srt2BilibiliKit.framework in Frameworks */,
+				OBJ_114 /* Srt2BilibiliKit.framework in Frameworks */,
+				OBJ_115 /* BilibiliKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_60 /* Frameworks */ = {
+		OBJ_130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_131 /* BilibiliKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_78 /* swift_qrcodejs.framework in Frameworks */,
+				OBJ_79 /* Srt2BilibiliKit.framework in Frameworks */,
+				OBJ_80 /* BilibiliKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_18 /* Srt2Bilibili-cli */ = {
+		OBJ_17 /* Srt2Bilibili-cli */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* main.swift */,
+				OBJ_18 /* main.swift */,
 			);
 			name = "Srt2Bilibili-cli";
 			path = "Sources/Srt2Bilibili-cli";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_20 /* Tests */ = {
+		OBJ_19 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* Srt2BilibiliKitTests */,
+				OBJ_20 /* Srt2BilibiliKitTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_21 /* Srt2BilibiliKitTests */ = {
+		OBJ_20 /* Srt2BilibiliKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* Srt2BilibiliKitTests.swift */,
+				OBJ_21 /* Srt2BilibiliKitTests.swift */,
 			);
 			name = Srt2BilibiliKitTests;
 			path = Tests/Srt2BilibiliKitTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* Products */ = {
+		OBJ_23 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* swift_qrcodejs */,
+				OBJ_43 /* BilibiliKit */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_24 /* swift_qrcodejs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* swift_qrcodejs */,
+				OBJ_41 /* swift_qrcodejs-cli */,
+				OBJ_42 /* Package.swift */,
+			);
+			name = swift_qrcodejs;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* swift_qrcodejs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* BCHUtil.swift */,
+				OBJ_27 /* Error.swift */,
+				OBJ_28 /* QR8bitByte.swift */,
+				OBJ_29 /* QRBitBuffer.swift */,
+				OBJ_30 /* QRCode.swift */,
+				OBJ_31 /* QRCodeModel.swift */,
+				OBJ_32 /* QRCodeRenderer.swift */,
+				OBJ_33 /* QRCodeType.swift */,
+				OBJ_34 /* QRErrorCorrectLevel.swift */,
+				OBJ_35 /* QRMaskPattern.swift */,
+				OBJ_36 /* QRMath.swift */,
+				OBJ_37 /* QRMode.swift */,
+				OBJ_38 /* QRPatternLocator.swift */,
+				OBJ_39 /* QRPolynomial.swift */,
+				OBJ_40 /* QRRSBlock.swift */,
+			);
+			name = swift_qrcodejs;
+			path = ".build/checkouts/swift_qrcodejs--3118771489649426200/Sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_41 /* swift_qrcodejs-cli */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "swift_qrcodejs-cli";
+			path = ".build/checkouts/swift_qrcodejs--3118771489649426200/Example";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_43 /* BilibiliKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_44 /* Package.swift */,
+				OBJ_45 /* BKCookie.swift */,
+				OBJ_46 /* BKLogin.swift */,
+			);
+			name = BilibiliKit;
+			path = ".build/checkouts/BilibiliKit-9099041423531033350/Sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"Srt2BilibiliKit::Srt2Bilibili-cli::Product" /* Srt2Bilibili-cli */,
+				"swift_qrcodejs::swift_qrcodejs::Product" /* swift_qrcodejs.framework */,
 				"Srt2BilibiliKit::Srt2BilibiliKitTests::Product" /* Srt2BilibiliKitTests.xctest */,
 				"Srt2BilibiliKit::Srt2BilibiliKit::Product" /* Srt2BilibiliKit.framework */,
+				"BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -147,9 +299,10 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_20 /* Tests */,
-				OBJ_23 /* sh */,
-				OBJ_24 /* Products */,
+				OBJ_19 /* Tests */,
+				OBJ_22 /* sh */,
+				OBJ_23 /* Dependencies */,
+				OBJ_47 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -158,7 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* Srt2BilibiliKit */,
-				OBJ_18 /* Srt2Bilibili-cli */,
+				OBJ_17 /* Srt2Bilibili-cli */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -167,14 +320,13 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* S2B.swift */,
-				OBJ_10 /* S2BCookie.swift */,
-				OBJ_11 /* S2BDanmaku.swift */,
-				OBJ_12 /* S2BEmitter.swift */,
-				OBJ_13 /* S2BPostableDanmaku.swift */,
-				OBJ_14 /* S2BPostedDanmaku.swift */,
-				OBJ_15 /* S2BSubRipFile.swift */,
-				OBJ_16 /* S2BSubtitle.swift */,
-				OBJ_17 /* S2BVideo.swift */,
+				OBJ_10 /* S2BDanmaku.swift */,
+				OBJ_11 /* S2BEmitter.swift */,
+				OBJ_12 /* S2BPostableDanmaku.swift */,
+				OBJ_13 /* S2BPostedDanmaku.swift */,
+				OBJ_14 /* S2BSubRipFile.swift */,
+				OBJ_15 /* S2BSubtitle.swift */,
+				OBJ_16 /* S2BVideo.swift */,
 			);
 			name = Srt2BilibiliKit;
 			path = Sources/Srt2BilibiliKit;
@@ -183,17 +335,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"Srt2BilibiliKit::Srt2Bilibili-cli" /* Srt2Bilibili-cli */ = {
+		"BilibiliKit::BilibiliKit" /* BilibiliKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_29 /* Build configuration list for PBXNativeTarget "Srt2Bilibili-cli" */;
+			buildConfigurationList = OBJ_133 /* Build configuration list for PBXNativeTarget "BilibiliKit" */;
 			buildPhases = (
-				OBJ_32 /* Sources */,
-				OBJ_34 /* Frameworks */,
+				OBJ_136 /* Sources */,
+				OBJ_139 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_36 /* PBXTargetDependency */,
+			);
+			name = BilibiliKit;
+			productName = BilibiliKit;
+			productReference = "BilibiliKit::BilibiliKit::Product" /* BilibiliKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"BilibiliKit::SwiftPMPackageDescription" /* BilibiliKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_66 /* Build configuration list for PBXNativeTarget "BilibiliKitPackageDescription" */;
+			buildPhases = (
+				OBJ_69 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BilibiliKitPackageDescription;
+			productName = BilibiliKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Srt2BilibiliKit::Srt2Bilibili-cli" /* Srt2Bilibili-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "Srt2Bilibili-cli" */;
+			buildPhases = (
+				OBJ_75 /* Sources */,
+				OBJ_77 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_81 /* PBXTargetDependency */,
+				OBJ_83 /* PBXTargetDependency */,
+				OBJ_85 /* PBXTargetDependency */,
 			);
 			name = "Srt2Bilibili-cli";
 			productName = Srt2Bilibili_cli;
@@ -202,14 +386,15 @@
 		};
 		"Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit" */;
+			buildConfigurationList = OBJ_118 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit" */;
 			buildPhases = (
-				OBJ_50 /* Sources */,
-				OBJ_60 /* Frameworks */,
+				OBJ_121 /* Sources */,
+				OBJ_130 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_132 /* PBXTargetDependency */,
 			);
 			name = Srt2BilibiliKit;
 			productName = Srt2BilibiliKit;
@@ -218,20 +403,65 @@
 		};
 		"Srt2BilibiliKit::Srt2BilibiliKitTests" /* Srt2BilibiliKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitTests" */;
+			buildConfigurationList = OBJ_108 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitTests" */;
 			buildPhases = (
-				OBJ_42 /* Sources */,
-				OBJ_44 /* Frameworks */,
+				OBJ_111 /* Sources */,
+				OBJ_113 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_46 /* PBXTargetDependency */,
+				OBJ_116 /* PBXTargetDependency */,
+				OBJ_117 /* PBXTargetDependency */,
 			);
 			name = Srt2BilibiliKitTests;
 			productName = Srt2BilibiliKitTests;
 			productReference = "Srt2BilibiliKit::Srt2BilibiliKitTests::Product" /* Srt2BilibiliKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Srt2BilibiliKit::SwiftPMPackageDescription" /* Srt2BilibiliKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitPackageDescription" */;
+			buildPhases = (
+				OBJ_57 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Srt2BilibiliKitPackageDescription;
+			productName = Srt2BilibiliKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"swift_qrcodejs::SwiftPMPackageDescription" /* swift_qrcodejsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_60 /* Build configuration list for PBXNativeTarget "swift_qrcodejsPackageDescription" */;
+			buildPhases = (
+				OBJ_63 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swift_qrcodejsPackageDescription;
+			productName = swift_qrcodejsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"swift_qrcodejs::swift_qrcodejs" /* swift_qrcodejs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_87 /* Build configuration list for PBXNativeTarget "swift_qrcodejs" */;
+			buildPhases = (
+				OBJ_90 /* Sources */,
+				OBJ_106 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swift_qrcodejs;
+			productName = swift_qrcodejs;
+			productReference = "swift_qrcodejs::swift_qrcodejs::Product" /* swift_qrcodejs.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -249,72 +479,287 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_24 /* Products */;
+			productRefGroup = OBJ_47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"Srt2BilibiliKit::SwiftPMPackageDescription" /* Srt2BilibiliKitPackageDescription */,
+				"swift_qrcodejs::SwiftPMPackageDescription" /* swift_qrcodejsPackageDescription */,
+				"BilibiliKit::SwiftPMPackageDescription" /* BilibiliKitPackageDescription */,
 				"Srt2BilibiliKit::Srt2Bilibili-cli" /* Srt2Bilibili-cli */,
+				"swift_qrcodejs::swift_qrcodejs" /* swift_qrcodejs */,
 				"Srt2BilibiliKit::Srt2BilibiliKitTests" /* Srt2BilibiliKitTests */,
 				"Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */,
+				"BilibiliKit::BilibiliKit" /* BilibiliKit */,
 				"Srt2BilibiliKit::Srt2BilibiliKitPackageTests::ProductTarget" /* Srt2BilibiliKitPackageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_32 /* Sources */ = {
+		OBJ_111 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_33 /* main.swift in Sources */,
+				OBJ_112 /* Srt2BilibiliKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_42 /* Sources */ = {
+		OBJ_121 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_43 /* Srt2BilibiliKitTests.swift in Sources */,
+				OBJ_122 /* S2B.swift in Sources */,
+				OBJ_123 /* S2BDanmaku.swift in Sources */,
+				OBJ_124 /* S2BEmitter.swift in Sources */,
+				OBJ_125 /* S2BPostableDanmaku.swift in Sources */,
+				OBJ_126 /* S2BPostedDanmaku.swift in Sources */,
+				OBJ_127 /* S2BSubRipFile.swift in Sources */,
+				OBJ_128 /* S2BSubtitle.swift in Sources */,
+				OBJ_129 /* S2BVideo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_50 /* Sources */ = {
+		OBJ_136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_51 /* S2B.swift in Sources */,
-				OBJ_52 /* S2BCookie.swift in Sources */,
-				OBJ_53 /* S2BDanmaku.swift in Sources */,
-				OBJ_54 /* S2BEmitter.swift in Sources */,
-				OBJ_55 /* S2BPostableDanmaku.swift in Sources */,
-				OBJ_56 /* S2BPostedDanmaku.swift in Sources */,
-				OBJ_57 /* S2BSubRipFile.swift in Sources */,
-				OBJ_58 /* S2BSubtitle.swift in Sources */,
-				OBJ_59 /* S2BVideo.swift in Sources */,
+				OBJ_137 /* BKCookie.swift in Sources */,
+				OBJ_138 /* BKLogin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_58 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_64 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_70 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_76 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_91 /* BCHUtil.swift in Sources */,
+				OBJ_92 /* Error.swift in Sources */,
+				OBJ_93 /* QR8bitByte.swift in Sources */,
+				OBJ_94 /* QRBitBuffer.swift in Sources */,
+				OBJ_95 /* QRCode.swift in Sources */,
+				OBJ_96 /* QRCodeModel.swift in Sources */,
+				OBJ_97 /* QRCodeRenderer.swift in Sources */,
+				OBJ_98 /* QRCodeType.swift in Sources */,
+				OBJ_99 /* QRErrorCorrectLevel.swift in Sources */,
+				OBJ_100 /* QRMaskPattern.swift in Sources */,
+				OBJ_101 /* QRMath.swift in Sources */,
+				OBJ_102 /* QRMode.swift in Sources */,
+				OBJ_103 /* QRPatternLocator.swift in Sources */,
+				OBJ_104 /* QRPolynomial.swift in Sources */,
+				OBJ_105 /* QRRSBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_36 /* PBXTargetDependency */ = {
+		OBJ_116 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */;
-			targetProxy = 5294C17F1F19460400EF4858 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE0E1FE20DAE004F4E23 /* PBXContainerItemProxy */;
 		};
-		OBJ_46 /* PBXTargetDependency */ = {
+		OBJ_117 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */;
-			targetProxy = 5294C1801F19460400EF4858 /* PBXContainerItemProxy */;
+			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
+			targetProxy = 52B3EE0F1FE20DAE004F4E23 /* PBXContainerItemProxy */;
 		};
-		OBJ_65 /* PBXTargetDependency */ = {
+		OBJ_132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
+			targetProxy = 52B3EE0C1FE20DAE004F4E23 /* PBXContainerItemProxy */;
+		};
+		OBJ_144 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Srt2BilibiliKit::Srt2BilibiliKitTests" /* Srt2BilibiliKitTests */;
-			targetProxy = 5294C1811F19462700EF4858 /* PBXContainerItemProxy */;
+			targetProxy = 52B3EE101FE20DAF004F4E23 /* PBXContainerItemProxy */;
+		};
+		OBJ_81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "swift_qrcodejs::swift_qrcodejs" /* swift_qrcodejs */;
+			targetProxy = 52B3EE0A1FE20DAE004F4E23 /* PBXContainerItemProxy */;
+		};
+		OBJ_83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Srt2BilibiliKit::Srt2BilibiliKit" /* Srt2BilibiliKit */;
+			targetProxy = 52B3EE0B1FE20DAE004F4E23 /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "BilibiliKit::BilibiliKit" /* BilibiliKit */;
+			targetProxy = 52B3EE0D1FE20DAE004F4E23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		OBJ_109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Srt2BilibiliKitTests;
+			};
+			name = Debug;
+		};
+		OBJ_110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Srt2BilibiliKitTests;
+			};
+			name = Release;
+		};
+		OBJ_119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Srt2BilibiliKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Srt2BilibiliKit;
+			};
+			name = Debug;
+		};
+		OBJ_120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Srt2BilibiliKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Srt2BilibiliKit;
+			};
+			name = Release;
+		};
+		OBJ_134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/BilibiliKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BilibiliKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BilibiliKit;
+			};
+			name = Debug;
+		};
+		OBJ_135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/BilibiliKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BilibiliKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BilibiliKit;
+			};
+			name = Release;
+		};
+		OBJ_142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,44 +782,6 @@
 			};
 			name = Debug;
 		};
-		OBJ_30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
-				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = "Srt2Bilibili-cli";
-			};
-			name = Debug;
-		};
-		OBJ_31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
-				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = "Srt2Bilibili-cli";
-			};
-			name = Release;
-		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,43 +802,99 @@
 			};
 			name = Release;
 		};
-		OBJ_40 /* Debug */ = {
+		OBJ_55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Srt2BilibiliKitTests;
 			};
 			name = Debug;
 		};
-		OBJ_41 /* Release */ = {
+		OBJ_56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKitTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Srt2BilibiliKitTests;
+				TARGET_NAME = "Srt2Bilibili-cli";
+			};
+			name = Debug;
+		};
+		OBJ_74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2Bilibili_cli_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = "Srt2Bilibili-cli";
 			};
 			name = Release;
 		};
-		OBJ_48 /* Debug */ = {
+		OBJ_88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -440,20 +903,20 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist;
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/swift_qrcodejs_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Srt2BilibiliKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "swift-qrcodejs";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Srt2BilibiliKit;
+				TARGET_NAME = swift_qrcodejs;
 			};
 			name = Debug;
 		};
-		OBJ_49 /* Release */ = {
+		OBJ_89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -462,34 +925,58 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/Srt2BilibiliKit_Info.plist;
+				INFOPLIST_FILE = Srt2BilibiliKit.xcodeproj/swift_qrcodejs_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Srt2BilibiliKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "swift-qrcodejs";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Srt2BilibiliKit;
-			};
-			name = Release;
-		};
-		OBJ_63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				TARGET_NAME = swift_qrcodejs;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		OBJ_108 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_109 /* Debug */,
+				OBJ_110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_118 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_119 /* Debug */,
+				OBJ_120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_133 /* Build configuration list for PBXNativeTarget "BilibiliKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_134 /* Debug */,
+				OBJ_135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_141 /* Build configuration list for PBXAggregateTarget "Srt2BilibiliKitPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_142 /* Debug */,
+				OBJ_143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Srt2BilibiliKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -499,38 +986,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_29 /* Build configuration list for PBXNativeTarget "Srt2Bilibili-cli" */ = {
+		OBJ_54 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_30 /* Debug */,
-				OBJ_31 /* Release */,
+				OBJ_55 /* Debug */,
+				OBJ_56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_39 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKitTests" */ = {
+		OBJ_60 /* Build configuration list for PBXNativeTarget "swift_qrcodejsPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_40 /* Debug */,
-				OBJ_41 /* Release */,
+				OBJ_61 /* Debug */,
+				OBJ_62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_47 /* Build configuration list for PBXNativeTarget "Srt2BilibiliKit" */ = {
+		OBJ_66 /* Build configuration list for PBXNativeTarget "BilibiliKitPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_48 /* Debug */,
-				OBJ_49 /* Release */,
+				OBJ_67 /* Debug */,
+				OBJ_68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_62 /* Build configuration list for PBXAggregateTarget "Srt2BilibiliKitPackageTests" */ = {
+		OBJ_72 /* Build configuration list for PBXNativeTarget "Srt2Bilibili-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_63 /* Debug */,
-				OBJ_64 /* Release */,
+				OBJ_73 /* Debug */,
+				OBJ_74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_87 /* Build configuration list for PBXNativeTarget "swift_qrcodejs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_88 /* Debug */,
+				OBJ_89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

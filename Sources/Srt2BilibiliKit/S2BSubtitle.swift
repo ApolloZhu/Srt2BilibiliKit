@@ -18,7 +18,7 @@ public struct S2BSubtitle {
     public let endTime: TimeInterval
     /// Actual content of the subtitle.
     public let contents: [String]
-
+    
     /// Initialize a subtitle with given information.
     ///
     /// - Parameters:

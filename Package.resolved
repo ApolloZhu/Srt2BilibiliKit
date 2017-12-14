@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BilibiliKit",
+        "repositoryURL": "https://github.com/ApolloZhu/BilibiliKit",
+        "state": {
+          "branch": "master",
+          "revision": "c20365b77b5d62378dc0506046b1b80f961c523e",
+          "version": null
+        }
+      },
+      {
+        "package": "swift_qrcodejs",
+        "repositoryURL": "https://github.com/ApolloZhu/swift_qrcodejs",
+        "state": {
+          "branch": "master",
+          "revision": "2406b6c7f903fe38e7ee292e8f49545441cfaa2d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

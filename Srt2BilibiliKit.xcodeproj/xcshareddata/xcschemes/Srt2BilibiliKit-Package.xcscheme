@@ -28,9 +28,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "swift_qrcodejs::swift_qrcodejs"
+               BuildableName = "swift_qrcodejs.framework"
+               BlueprintName = "swift_qrcodejs"
+               ReferencedContainer = "container:Srt2BilibiliKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Srt2BilibiliKit::Srt2BilibiliKit"
                BuildableName = "Srt2BilibiliKit.framework"
                BlueprintName = "Srt2BilibiliKit"
+               ReferencedContainer = "container:Srt2BilibiliKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BilibiliKit::BilibiliKit"
+               BuildableName = "BilibiliKit.framework"
+               BlueprintName = "BilibiliKit"
                ReferencedContainer = "container:Srt2BilibiliKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

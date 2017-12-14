@@ -8,6 +8,7 @@
 
 import Foundation
 import Dispatch
+import BilibiliKit
 
 /// Danmaku "poster"
 public final class S2BEmitter {
@@ -15,7 +16,7 @@ public final class S2BEmitter {
     public static let `default` = S2BEmitter()
     
     /// Cookie required for posting danmaku
-    private let cookie: S2BCookie
+    private let cookie: BKCookie
     /// Cool time in seconds (time to wait before posting the next one).
     private let delay: Double
     
@@ -28,7 +29,7 @@ public final class S2BEmitter {
     /// - Parameters:
     ///   - cookie: cookie required for posting danmaku.
     ///   - delay: cool time between sending danmaku in seconds.
-    public init(cookie: S2BCookie! = .default, delay: Double = S2BEmitter.defaultDelay) {
+    public init(cookie: BKCookie! = .default, delay: Double = S2BEmitter.defaultDelay) {
         self.cookie = cookie
         self.delay = delay
     }
@@ -46,12 +47,12 @@ public final class S2BEmitter {
         /// Something else went wrong.
         case aborted(danmaku: S2BPostableDanmaku, data: Data?, error: Error?)
     }
-
+    
     /// To handle result after tring to post a danmaku.
     ///
     /// - Parameter result: result after trying to post a danmaku.
     public typealias FailablePostCompletionHandler = (_ result: Result) -> Void
-
+    
     /// To keep track of the current state.
     private var isPosting = false
     
@@ -80,7 +81,7 @@ public final class S2BEmitter {
             request.httpBody = data
             request.httpMethod = "POST"
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
-            request.addValue(cookie.description, forHTTPHeaderField: "Cookie")
+            request.addValue(cookie.asHeaderField, forHTTPHeaderField: "Cookie")
             let task = S2B.kit.urlSession.dataTask(with: request) { [delay] (data, response, error) in
                 DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
                     guard let this = self, error == nil, let datium = data,

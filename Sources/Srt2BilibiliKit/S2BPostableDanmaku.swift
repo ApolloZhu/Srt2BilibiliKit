@@ -36,7 +36,7 @@ public class S2BPostableDanmaku: S2BDanmaku, CustomStringConvertible {
         let postable = S2BPostableDanmaku(raw)
         return (postable, "\(postable)".data(using: .utf8))
     }
-
+    
     /// String representation of post request body
     public var description: String {
         let date: String = {

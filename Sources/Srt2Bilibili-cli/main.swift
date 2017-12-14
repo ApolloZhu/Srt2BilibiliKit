@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import BilibiliKit
 import Srt2BilibiliKit
+import swift_qrcodejs
 
 // MARK: Arguments
 
 var arguments: [String]
 arguments = CommandLine.arguments
-//arguments = ["s2bkit", "-l", "1", "-f", "18", "25", "-a", "8997583", "-s", "/Users/Apollonian/Documents/Git-Repo/Developing-iOS-10-Apps-with-Swift/subtitles/3. More Swift and the Foundation Framework.srt", "-c", "/Users/Apollonian/bilicookies"]
 
 // MARK: Usage/Help
 
@@ -35,9 +36,9 @@ let help = """
 \tThe page/part number.
 
 -c cookie (default ./bilicookies)
-\tThe path to the cookie file, requirement for posting danmaku
-\tRetrieved using https://github.com/dantmnf/biliupload/blob/master/getcookie.py,
-\thas structure similar to
+\tThe path to the cookie file, requirement for posting danmaku.
+\tWe can generate for you, or you can create one from browser cookies.
+\tIts structure is similar to
 \t
 \tDedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx
 
@@ -76,7 +77,7 @@ func exitAfterPrintingUsage() -> Never { print(usage+"\n"+help);exit(0) }
 var aid: Int?
 var srt: String?
 var page = 1
-var cookie: String? = nil
+var cookiePath: String? = nil
 var color = [Int]()
 var fontSize = [Int]()
 var mode = [Int]()
@@ -109,7 +110,7 @@ while index < arguments.count {
     case "-p", "--page", "--part":
         page = Int(next()) ?? page
     case "-c", "--cookie":
-        cookie = next()
+        cookiePath = next()
     case "-o", "--color":
         while hasNext() {
             var option = next()
@@ -136,14 +137,44 @@ while index < arguments.count {
     }
 }
 
-// MARK: Check Required
+guard let cookie = BKCookie(path: cookiePath) else {
+    var needsConfirmation = true
+    func stateHandler(_ state: BKLogin.LoginState) {
+        switch state {
+        case .started: return
+        case .needsConfirmation:
+            if !needsConfirmation { return }
+            print("请点击网页/设备上的「确认登录」")
+            
+            needsConfirmation = false
+        case .succeeded(cookie: let newCookie):
+            try! newCookie.asHeaderField.write(toFile: "\(FileManager.default.currentDirectoryPath)/\(BKCookie.filename)", atomically: false, encoding: .utf8)
+            print("已经保存登录信息，请重新尝试上传弹幕")
+            exit(0)
+        case .expired, .missingOAuthKey:
+            fatalError("等待时间过长，请重新尝试登录")
+        case .unknown(status: let status):
+            exit(Int32(status))
+        }
+    }
+    
+    BKLogin.default.login(handleLoginInfo: { url in
+        if let qr = QRCode(url.url) {
+            let inverse = "\u{1B}[7m  ", normal = "\u{1B}[0m  "
+            print(qr.toString(filledWith: inverse, patchedWith: normal))
+            print("用 B 站客户端扫描二维码", terminator: "，或")
+        }
+        print("在登录了 B 站账号的浏览器打开网页：\(url.url)")
+    }, handleLoginState: stateHandler)
+    RunLoop.current.run()
+    exit(0)
+}
 
-guard let aid = aid else { fatalError("AV number is REQUIRED") }
-guard let path = srt, var subRip = S2BSubRipFile(path: path) else { fatalError("Path to srt file is REQUIRED") }
-guard let cookie = S2BCookie(path: cookie) else { fatalError("Unable to load cookie") }
+// MARK: Check Required
+guard let aid = aid else { fatalError("必须提供 AV 号") }
+guard let path = srt, var subRip = S2BSubRipFile(path: path) else { fatalError("必须提供 srt 文件的路径") }
 
 // MARK: Zip Configs
-
 if color.count == 0 { color = [S2BDanmaku.Config.default.color] }
 if fontSize.count == 0 { fontSize = [S2BDanmaku.Config.default.fontSize.rawValue] }
 if mode.count == 0 { mode = [S2BDanmaku.Config.default.mode.rawValue] }
@@ -165,16 +196,14 @@ let configs = zip(zip(color, fontSize), zip(mode, pool)).map {
 }
 
 // MARK: Post Danmaku
-
 S2BVideo(av: aid).page(page) {
-    guard let cid = $0?.cid, let title = $0?.pageName else { fatalError("Unable to fetch video") }
-    print("Posting to \(title)\n")
+    guard let cid = $0?.cid, let title = $0?.pageName else { fatalError("无法获取该视频的信息") }
+    print("发送弹幕到 \(title)\n")
     let emitter = S2BEmitter(cookie: cookie, delay: delay)
     emitter.post(srt: subRip, toCID: cid, configs: configs, updateHandler: { danmaku, progress in
         print("\(String(format: "%7.3f%%", progress.fractionCompleted * 100)) \(danmaku.content)")
     }) { _ in exit(0) }
 }
-
 // MARK: Wait Till Finish
 // Enable indefinite execution to wait for asynchronous operation
 RunLoop.current.run()

@@ -24,7 +24,7 @@ class Srt2BilibiliKitTests: XCTestCase {
             print($0)
             goal.fulfill()
         }
-        waitForExpectations(timeout: 5 * 60, handler: nil)
+        waitForExpectations(timeout: 150, handler: nil)
     }
 
     static let allTests = [
