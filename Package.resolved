@@ -3,16 +3,16 @@
     "pins": [
       {
         "package": "BilibiliKit",
-        "repositoryURL": "https://github.com/ApolloZhu/BilibiliKit",
+        "repositoryURL": "/Users/Apollonian/Documents/Git-Repo/BilibiliKit",
         "state": {
           "branch": "master",
-          "revision": "d4f409564dabc61586126472564aebacf241b17e",
+          "revision": "1f85fb3ad5438b0eee29c7986aa79dc6e1a36bb8",
           "version": null
         }
       },
       {
         "package": "swift_qrcodejs",
-        "repositoryURL": "https://github.com/ApolloZhu/swift_qrcodejs",
+        "repositoryURL": "/Users/Apollonian/Documents/Git-Repo/swift_qrcodejs",
         "state": {
           "branch": "master",
           "revision": "3f0eae58e0dc92bc25655fbb41648c1d7f3f9fd9",

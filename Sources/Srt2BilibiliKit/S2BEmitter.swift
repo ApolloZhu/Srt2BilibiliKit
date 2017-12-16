@@ -16,7 +16,8 @@ public final class S2BEmitter {
     public static let `default` = S2BEmitter()
     
     /// Cookie required for posting danmaku
-    private let cookie: BKCookie
+    private let session: BKSession
+
     /// Cool time in seconds (time to wait before posting the next one).
     private let delay: Double
     
@@ -24,14 +25,25 @@ public final class S2BEmitter {
     /// Number smaller than the default may result in ban or failure.
     public static let defaultDelay: Double = 3.5
     
-    /// Initalize a S2BEmitter with specified cookie and delay.
+    /// Initalize a S2BEmitter with specified session and delay.
     ///
     /// - Parameters:
-    ///   - cookie: cookie required for posting danmaku.
+    ///   - session: session containing cookie required for posting danmaku.
     ///   - delay: cool time between sending danmaku in seconds.
-    public init(cookie: BKCookie! = .default, delay: Double = S2BEmitter.defaultDelay) {
-        self.cookie = cookie
+    public init(session: BKSession! = .shared, delay: Double = S2BEmitter.defaultDelay) {
+        self.session = session
         self.delay = delay
+    }
+
+    /// Initalize a S2BEmitter with specified
+    /// cookie to add to the default session and delay.
+    ///
+    /// - Parameters:
+    ///   - cookie: cookie to be added to the default session.
+    ///   - delay: cool time between sending danmaku in seconds.
+    public convenience init(cookie: BKCookie, delay: Double = S2BEmitter.defaultDelay) {
+        BKSession.shared.cookie = cookie
+        self.init(delay: delay)
     }
     
     /// Result after trying to post a danmaku.
@@ -76,19 +88,16 @@ public final class S2BEmitter {
             }
         } else {
             isPosting = true
-            var request = URLRequest(url: URL(string: "http://interface.bilibili.com/dmpost?ct=1")!)
+            var request = session.postRequest(to: URL(string: "http://interface.bilibili.com/dmpost?ct=1")!)
             let (postable, data) = S2BPostableDanmaku.byEncoding(danmaku)
             request.httpBody = data
-            request.httpMethod = "POST"
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
-            request.addValue(cookie.asHeaderField, forHTTPHeaderField: "Cookie")
-            let task = S2B.kit.urlSession.dataTask(with: request) { [delay] (data, response, error) in
-                guard let handle = completionHandler else { return }
+            let task = S2B.kit.urlSession.dataTask(with: request) { [weak self, delay] (data, response, error) in
+                guard let handle = completionHandler else { self?.isPosting = false;return }
                 DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
                     if let this = self, error == nil, let datium = data {
                         this.isPosting = false
-                        let decoder = JSONDecoder()
-                        if let result = try? decoder.decode(Success.self, from: datium), result.code == 0 {
+                        if let result = try? JSONDecoder().decode(Success.self, from: datium), result.code == 0 {
                             return handle(.success(posted: S2BPostedDanmaku.byAssigning(postable, id: result.dmid)))
                         } else if let result = try? JSONDecoder().decode(Failure.self, from: datium) {
                             return handle(.refused(danmaku: postable, message: result.message, code: result.code))

@@ -138,27 +138,29 @@ while index < arguments.count {
 }
 
 guard let cookie = BKCookie(path: cookiePath) else {
-    var needsConfirmation = true
-    func stateHandler(_ state: BKLogin.LoginState) {
+    var didPromptForConfirmation = true
+    func stateHandler(_ state: BKLoginHelper.LoginState) {
         switch state {
         case .started: return
         case .needsConfirmation:
-            if !needsConfirmation { return }
+            if !didPromptForConfirmation { return }
             print("请点击网页/设备上的「确认登录」")
             
-            needsConfirmation = false
+            didPromptForConfirmation = false
         case .succeeded(cookie: let newCookie):
-            try! newCookie.asHeaderField.write(toFile: "\(FileManager.default.currentDirectoryPath)/\(BKCookie.filename)", atomically: false, encoding: .utf8)
+            newCookie.save()
             print("已经保存登录信息，请重新尝试上传弹幕")
             exit(0)
         case .expired, .missingOAuthKey:
             fatalError("等待时间过长，请重新尝试登录")
         case .unknown(status: let status):
             exit(Int32(status))
+        case .errored:
+            fatalError("遇到非 Bilibili 造成的错误")
         }
     }
     
-    BKLogin.default.login(handleLoginInfo: { url in
+    BKLoginHelper.default.login(handleLoginInfo: { url in
         if let qr = QRCode(url.url) {
             let inverse = "\u{1B}[7m  ", normal = "\u{1B}[0m  "
             print(qr.toString(filledWith: inverse, patchedWith: normal))
