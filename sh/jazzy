@@ -1,3 +1,16 @@
 #!/bin/sh
 sudo gem install jazzy
-jazzy --author ApolloZhu --author_url https://apollozhu.github.io --github_url https://github.com/ApolloZhu/Srt2BilibiliKit --module Srt2BilibiliKit
+version=1.0.5
+jazzy \
+      --clean \
+      --author ApolloZhu \
+      --author_url https://apollozhu.github.io \
+      --github_url https://github.com/ApolloZhu/Srt2BilibiliKit \
+      --github-file-prefix https://github.com/ApolloZhu/Srt2BilibiliKit/tree/${version} \
+      --module-version ${version} \
+      --xcodebuild-arguments -target,Srt2BilibiliKit \
+      --module Srt2BilibiliKit \
+      --root-url https://apollozhu.github.io/Srt2BilibiliKit/ \
+      --dash_url https://apollozhu.github.io/Srt2BilibiliKit/docsets/Srt2BilibiliKit.xml
+
+# --podspec FILEPATH           A CocoaPods Podspec that describes the Swift library to document

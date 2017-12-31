@@ -2,6 +2,7 @@ bilicookies
 .DS_Store
 .vscode
 
+docs/
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -40,6 +41,7 @@ playground.xcworkspace
 Packages/
 Package.pins
 .build/
+*.xcodeproj
 
 # CocoaPods
 Pods/
