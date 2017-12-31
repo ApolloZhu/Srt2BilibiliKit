@@ -13,6 +13,5 @@ class Srt2BilibiliKitTests: XCTestCase {
         waitForExpectations(timeout: 150, handler: nil)
     }
 
-    static let allTests: [String, (Srt2BilibiliKitTests) -> () -> Void] = []
-    ]
+    static let allTests: [(String, (Srt2BilibiliKitTests) -> () -> Void)] = []
 }
