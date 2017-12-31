@@ -10,12 +10,12 @@ dist: trusty
 before_script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/install/4)"
 script:
-  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/ci)"
   - sh sh/install-cmd
-after_script:
+  - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/ci)"
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/package/v4/codecov)"
 
 before_deploy:
+  - xcodebuild -list
   - sh sh/jazzy
 deploy:
   provider: pages
