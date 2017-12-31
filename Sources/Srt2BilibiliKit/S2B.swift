@@ -13,7 +13,7 @@ import Foundation
 /// Container for global stuff
 struct S2B {
     /// Entry point
-    public static let `kit` = S2B()
+    public static let kit = S2B()
     
     /// Container for "top level code"
     private init() {

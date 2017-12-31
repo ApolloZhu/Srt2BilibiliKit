@@ -214,7 +214,7 @@ let configs = zip(zip(color, fontSize), zip(mode, pool)).map {
 }
 
 // MARK: Post Danmaku
-S2BVideo(av: aid).page(page) {
+BKVideo(av: aid).page(page) {
     guard let cid = $0?.cid, let title = $0?.pageName else { fatalError("无法获取该视频的信息") }
     print("发送弹幕到 \(title)\n")
     let emitter = S2BEmitter(cookie: cookie, delay: delay)
