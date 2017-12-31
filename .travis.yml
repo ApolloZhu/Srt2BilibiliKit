@@ -15,7 +15,7 @@ script:
   - eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/package/v4/codecov)"
 
 before_deploy:
-  - xcodebuild -list
+  - swift package generate-xcodeproj
   - sh sh/jazzy
 deploy:
   provider: pages
