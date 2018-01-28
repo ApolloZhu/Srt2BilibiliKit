@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/ApolloZhu/BilibiliKit",
         "state": {
           "branch": "master",
-          "revision": "8cc2339d220df15dc54a03811b12bb41dbb33846",
+          "revision": "0fb1e70181d4d2206156fa21ee90e37157d1fe72",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/ApolloZhu/swift_qrcodejs",
         "state": {
           "branch": "master",
-          "revision": "30aeb8cf3ef771c26ff21d7b864320c708fc539a",
+          "revision": "c547aa43a1c4aae67035f2f3d1545b3fbd4855e7",
           "version": null
         }
       }

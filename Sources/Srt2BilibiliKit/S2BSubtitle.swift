@@ -67,7 +67,7 @@ extension S2BSubtitle {
     private static func timeInterval(from string: String) -> TimeInterval {
         let num = string.split(separator: ",")
             .flatMap { $0.split(separator: ":") }
-            .flatMap { Double("\($0)") }
+            .compactMap { Double("\($0)") }
         return num[0] * 3600 + num[1] * 60 + num[2] + num[3] / 1000
     }
 }
