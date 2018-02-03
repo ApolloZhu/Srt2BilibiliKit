@@ -9,38 +9,41 @@ import Foundation
 
 /// Danmaku fetched from server
 public class S2BPostedDanmaku: S2BPostableDanmaku {
-
+    /// CID of the video this danmaku is posted to.
+    public let cid: Int
+    
     /// Unique identifier of the danmaku.
     public let id: Int
-
+    
     /// Encrypted mid indicating the sender of danmaku,
     /// nil if was initialized locally.
     public let sender: Int?
-
+    
     /// If is constructed locally or generated from bilibili server result.
     public var wasInitializedLocally: Bool { return sender == nil }
-
+    
     public init(_ danmaku: String, cid: Int, playTime: TimeInterval, config: Config, date: Date, id: Int, sender: Int? = nil) {
         self.sender = sender
         self.id = id
-        super.init(danmaku, cid: cid, playTime: playTime, config: config)
+        self.cid = cid
+        super.init(danmaku, playTime: playTime, config: config)
     }
-
+    
     public convenience init(_ danmaku: String, cid: Int, playTime: TimeInterval, rgb color: Int, fontSize: Config.FontSize!, mode: Config.Mode!, pool: Config.Pool!, date: Date, id: Int, sender: Int? = nil) {
         self.init(danmaku, cid: cid, playTime: playTime,
                   config: .init(rgb: color, fontSize: fontSize, mode: mode, pool: pool), date: date, id: id, sender: sender)
     }
-
+    
     /// Constructs a new posted danmaku with given id.
     ///
     /// - Parameters:
     ///   - postable: a postable danmaku.
     ///   - id: id returned by bilibili.
     /// - Returns: a posted danmaku with given id.
-    static func byAssigning(_ postable: S2BPostableDanmaku, id: Int) -> S2BPostedDanmaku {
-        return S2BPostedDanmaku(postable.content, cid: postable.cid, playTime: postable.playTime, config: postable.config, date: postable.date, id: id)
+    static func byAssigning(_ postable: S2BPostableDanmaku, cid: Int, id: Int) -> S2BPostedDanmaku {
+        return S2BPostedDanmaku(postable.content, cid: cid, playTime: postable.playTime, config: postable.config, date: postable.date, id: id)
     }
-
+    
     /// Initialize a new posted danmaku with xml attribute,
     /// as in form returned by bilibili server, like the following:
     ///
@@ -67,12 +70,12 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
         guard let id = Int(parts[7]) else { return nil }
         self.init(content, cid: cid, playTime: playTime, rgb: color, fontSize: size, mode: mode, pool: pool, date: date, id: id, sender: sender)
     }
-
+    
     /// To process all danmaku associated.
     ///
     /// - Parameter allDanmaku: all the danmaku for a video.
     public typealias AllDanmakuHandler = (_ allDanmaku: [S2BPostedDanmaku]) -> Void
-
+    
     /// Fetch all danmaku in the given cid.
     ///
     /// - Parameters:
@@ -87,7 +90,7 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
         parser.delegate = delegate
         let _ = parser.parse()
     }
-
+    
     /*
      <i>
      <chatserver>chat.bilibili.com</chatserver>
@@ -103,32 +106,32 @@ public class S2BPostedDanmaku: S2BPostableDanmaku {
     private class DanmakuXMLParserDelegate: NSObject, XMLParserDelegate {
         var handler: AllDanmakuHandler!
         var cid: Int!
-
+        
         var posted = [S2BPostedDanmaku]()
-
+        
         private var curAttr: String?
-
+        
         func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
             guard elementName == "d" else { return }
             curAttr = attributeDict["p"]!
         }
-
+        
         func parser(_ parser: XMLParser, foundCharacters string: String) {
             if let attr = curAttr {
                 posted.append(.init(xmlAttribute: attr, cid: cid, content: string))
                 curAttr = nil
             }
         }
-
+        
         func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
             guard curAttr == nil else { fatalError() }
         }
-
+        
         func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error) {
             handler(posted)
             fatalError()
         }
-
+        
         func parserDidEndDocument(_ parser: XMLParser) {
             handler(posted)
         }

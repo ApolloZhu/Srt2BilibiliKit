@@ -17,7 +17,7 @@ public final class S2BEmitter {
     
     /// Cookie required for posting danmaku
     private let session: BKSession
-
+    
     /// Cool time in seconds (time to wait before posting the next one).
     private let delay: Double
     
@@ -34,7 +34,7 @@ public final class S2BEmitter {
         self.session = session
         self.delay = delay
     }
-
+    
     /// Initalize a S2BEmitter with specified
     /// cookie to add to the default session and delay.
     ///
@@ -81,15 +81,16 @@ public final class S2BEmitter {
     /// - Parameters:
     ///   - danmaku: danmaku to post.
     ///   - completionHandler: task to perform once tried.
-    public func tryPost(danmaku: S2BDanmaku, completionHandler: FailablePostCompletionHandler? = nil) {
+    public func tryPost(danmaku: S2BDanmaku, toPage page: BKVideo.Page, completionHandler: FailablePostCompletionHandler? = nil) {
         if isPosting {
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
-                self?.tryPost(danmaku: danmaku, completionHandler: completionHandler)
+                self?.tryPost(danmaku: danmaku, toPage: page, completionHandler: completionHandler)
             }
         } else {
             isPosting = true
-            var request = session.postRequest(to: URL(string: "http://interface.bilibili.com/dmpost?ct=1")!)
-            let (postable, data) = S2BPostableDanmaku.byEncoding(danmaku)
+            let str = "https://interface.bilibili.com/dmpost?cid=\(page.cid)&aid=\(page.aid!)&pid=\(page.page)&ct=1"
+            var request = session.postRequest(to: URL(string: str)!)
+            let (postable, data) = S2BPostableDanmaku.byEncoding(danmaku, cid: page.cid, forSession: session)
             request.httpBody = data
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
             let task = S2B.kit.urlSession.dataTask(with: request) { [weak self, delay] (data, response, error) in
@@ -98,7 +99,7 @@ public final class S2BEmitter {
                     if let this = self, error == nil, let datium = data {
                         this.isPosting = false
                         if let result = try? JSONDecoder().decode(Success.self, from: datium), result.code == 0 {
-                            return handle(.success(posted: S2BPostedDanmaku.byAssigning(postable, id: result.dmid)))
+                            return handle(.success(posted: S2BPostedDanmaku.byAssigning(postable, cid: page.cid, id: result.dmid)))
                         } else if let result = try? JSONDecoder().decode(Failure.self, from: datium) {
                             return handle(.refused(danmaku: postable, message: result.message, code: result.code))
                         }
@@ -138,9 +139,9 @@ public extension S2BEmitter {
     /// - Parameters:
     ///   - danmaku: danmaku to post.
     ///   - completionHandler: task to perform once the danmaku was successfully posted.
-    public func post(danmaku: S2BDanmaku, completionHandler: PostCompletionHandler? = nil) {
+    public func post(danmaku: S2BDanmaku, toPage page: BKVideo.Page, completionHandler: PostCompletionHandler? = nil) {
         func emit() {
-            tryPost(danmaku: danmaku) { result in
+            tryPost(danmaku: danmaku, toPage: page) { result in
                 switch result {
                 case .success(posted: let posted):
                     completionHandler?(posted)
@@ -174,7 +175,7 @@ public extension S2BEmitter {
     ///   - configs: configurations of danmakus.
     ///   - updateHandler: task to perform once a danmaku was posted.
     ///   - completionHandler: task to perform after all danmaku were posted.
-    public func post(subtitle: S2BSubtitle, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
+    public func post(subtitle: S2BSubtitle, toPage page: BKVideo.Page, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var contents = subtitle.contents
         guard contents.count > 0 else { completionHandler?([]);return }
         var progress = Progress(totalUnitCount: Int64(contents.count))
@@ -189,7 +190,7 @@ public extension S2BEmitter {
         var config = configs.removeFirst()
         var allPosted = [S2BPostedDanmaku]()
         func emit() {
-            post(danmaku: S2BDanmaku(danmaku, cid: cid, playTime: subtitle.startTime, config: config)) { posted in
+            post(danmaku: S2BDanmaku(danmaku, playTime: subtitle.startTime, config: config), toPage: page) { posted in
                 progress.completedUnitCount += 1
                 allPosted.append(posted)
                 updateHandler?(posted, progress)
@@ -210,14 +211,14 @@ public extension S2BEmitter {
     ///   - configs: configurations of danmakus.
     ///   - updateHandler: task to perform once a danmaku was posted.
     ///   - completionHandler: task to perform after all danmaku were posted.
-    public func post(srt: S2BSubRipFile, toCID cid: Int, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
+    public func post(srt: S2BSubRipFile, toPage page: BKVideo.Page, configs: [S2BDanmaku.Config] = [.default], updateHandler: ProgressReportHandler? = nil, completionHandler: CompletionHandler? = nil) {
         var subs = srt.subtitles
         guard subs.count > 0 else { completionHandler?([]);return }
         var progress = Progress(totalUnitCount: Int64(subs.count))
         var sub = subs.removeFirst()
         func emit() {
             progress.becomeCurrent(withPendingUnitCount: 1)
-            post(subtitle: sub, toCID: cid, configs: configs,
+            post(subtitle: sub, toPage: page, configs: configs,
                  updateHandler: { posted, _ /*sub progress*/ in updateHandler?(posted, progress) },
                  completionHandler: { posted in
                     if subs.count < 1 { completionHandler?(posted);return }

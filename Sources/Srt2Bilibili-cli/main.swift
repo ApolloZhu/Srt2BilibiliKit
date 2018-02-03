@@ -12,12 +12,10 @@ import Srt2BilibiliKit
 import swift_qrcodejs
 
 // MARK: Arguments
-
 var arguments: [String]
 arguments = CommandLine.arguments
 
 // MARK: Usage/Help
-
 let usage = """
 usage: s2bkit [-h] -a avNumber -s subRipFile [-p 1] [-c ./bilicookies] [-o \(S2BDanmaku.Config.default.color)...] [-f \(S2BDanmaku.Config.default.fontSize.rawValue)...] [-m \(S2BDanmaku.Config.default.mode.rawValue)...] [-l \(S2BDanmaku.Config.default.pool.rawValue)...] [-w \(S2BEmitter.defaultDelay)]
 """
@@ -40,7 +38,7 @@ let help = """
 \tWe can generate for you, or you can create one from browser cookies.
 \tIts structure is similar to
 \t
-\tDedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx
+\tDedeUserID=xx;DedeUserID__ckMd5=xx;SESSDATA=xx;bili_jct=xx
 
 -o color (default \(S2BDanmaku.Config.default.color))
 \tThe color of danmaku, represented in dec(\(S2BDanmaku.Config.default.color)) or hex(0x\(String(format: "%x", S2BDanmaku.Config.default.color))).
@@ -76,7 +74,7 @@ func exitAfterPrintingUsage() -> Never { print(usage+"\n"+help);exit(0) }
 
 var aid: Int?
 var srt: String?
-var page = 1
+var pid = 1
 var cookiePath: String? = nil
 var color = [Int]()
 var fontSize = [Int]()
@@ -108,7 +106,7 @@ while index < arguments.count {
     case "-s", "--srt", "--subrip":
         srt = next()
     case "-p", "--page", "--part":
-        page = Int(next()) ?? page
+        pid = Int(next()) ?? pid
     case "-c", "--cookie":
         cookiePath = next()
     case "-o", "--color":
@@ -177,7 +175,6 @@ guard let aid = aid else { fatalError("必须提供 AV 号") }
 guard let path = srt, var subRip = S2BSubRipFile(path: path) else { fatalError("必须提供 srt 文件的路径") }
 
 // MARK: Default Configs
-
 if color.count == 0 { color = [S2BDanmaku.Config.default.color] }
 if fontSize.count == 0 { fontSize = [S2BDanmaku.Config.default.fontSize.rawValue] }
 if mode.count == 0 { mode = [S2BDanmaku.Config.default.mode.rawValue] }
@@ -214,11 +211,11 @@ let configs = zip(zip(color, fontSize), zip(mode, pool)).map {
 }
 
 // MARK: Post Danmaku
-BKVideo(av: aid).page(page) {
-    guard let cid = $0?.cid, let title = $0?.pageName else { fatalError("无法获取该视频的信息") }
-    print("发送弹幕到 \(title)\n")
+BKVideo(av: aid).page(pid) {
+    guard let page = $0 else { return }
+    print("发送弹幕到 \(page.pageName)\n")
     let emitter = S2BEmitter(cookie: cookie, delay: delay)
-    emitter.post(srt: subRip, toCID: cid, configs: configs, updateHandler: { danmaku, progress in
+    emitter.post(srt: subRip, toPage: page, configs: configs, updateHandler: { danmaku, progress in
         print("\(String(format: "%7.3f%%", progress.fractionCompleted * 100)) \(danmaku.content)")
     }) { _ in exit(0) }
 }

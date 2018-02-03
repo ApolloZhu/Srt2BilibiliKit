@@ -22,12 +22,21 @@ extension S2BSubRipFile {
         /// Indicating what the next piece of information is
         enum ParsingState { case index, time, content }
         
-        for part in content.components(separatedBy: "\n\n").lazy {
+        let lineSeparator: String
+        if content.contains("\r\n") {
+            lineSeparator = "\r\n"
+        } else if content.contains("r") {
+            lineSeparator = "\r"
+        } else {
+            lineSeparator = "\n"
+        }
+        
+        for part in content.components(separatedBy: "\(lineSeparator)\(lineSeparator)").lazy {
             var state = ParsingState.index
             var index: Int? = nil
             var time: String? = nil
             var content = [String]()
-            for line in part.components(separatedBy: "\n") {
+            for line in part.components(separatedBy: lineSeparator) {
                 let line = line.trimmingCharacters(in: .whitespacesAndNewlines)
                 switch state {
                 case .index:

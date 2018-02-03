@@ -10,7 +10,6 @@ import Foundation
 
 /// Basic information of a local danmaku
 public class S2BDanmaku {
-    
     /// Initialize a danmaku with given content, cid to post to,
     /// time to display, and configurations.
     ///
@@ -19,8 +18,7 @@ public class S2BDanmaku {
     ///   - cid: cid for the danmaku to post to.
     ///   - playTime: time to display the danmaku.
     ///   - config: configurations of the danmaku.
-    public init(_ danmaku: String, cid: Int, playTime: TimeInterval, config: Config) {
-        self.cid = cid
+    public init(_ danmaku: String, playTime: TimeInterval, config: Config) {
         self.content = danmaku
         self.playTime = playTime
         self.config = config
@@ -37,13 +35,11 @@ public class S2BDanmaku {
     ///   - fontSize: font size of the danmaku.
     ///   - mode: mode/type of the danmaku.
     ///   - pool: pool for the danmaku to post to.
-    public convenience init(_ danmaku: String, cid: Int, playTime: TimeInterval, rgb color: Int? = nil, fontSize: Config.FontSize? = nil, mode: Config.Mode? = nil, pool: Config.Pool? = nil) {
-        self.init(danmaku, cid: cid, playTime: playTime,
+    public convenience init(_ danmaku: String, playTime: TimeInterval, rgb color: Int? = nil, fontSize: Config.FontSize? = nil, mode: Config.Mode? = nil, pool: Config.Pool? = nil) {
+        self.init(danmaku, playTime: playTime,
                   config: Config(rgb: color, fontSize: fontSize, mode: mode, pool: pool))
     }
     
-    /// CID of the video to post to
-    public let cid: Int
     /// Content of the danmaku
     public let content: String
     /// When the danmaku should appear
