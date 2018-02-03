@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Result Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/Result" class="dashAnchor"></a>
+    <a title="Result Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">Srt2BilibiliKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/ApolloZhu/Srt2BilibiliKit"><img src="../../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapollozhu%2Egithub%2Eio%2FSrt2BilibiliKit%2Fdocsets%2FSrt2BilibiliKit%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">Srt2BilibiliKit Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        Result Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BDanmaku.html">S2BDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BDanmaku/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BEmitter.html">S2BEmitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BEmitter/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/Sequence.html">Sequence</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/S2BSubRipFile.html">S2BSubRipFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/S2BSubtitle.html">S2BSubtitle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Result</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span></code></pre>
+
+                </div>
+              </div>
+            <p>Result after trying to post a danmaku.</p>
+
+<ul>
+<li>success: danmaku was successfully posted.</li>
+<li>refused: bilibili refused to accept the postable danmaku.</li>
+<li>aborted: something else went wrong.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7successAeA0D14BPostedDanmakuC6posted_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/success" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7successAeA0D14BPostedDanmakuC6posted_tcAEmF">success</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Danmaku was successfully posted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="nv">posted</span><span class="p">:</span> <span class="kt"><a href="../../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7refusedAeA0D16BPostableDanmakuC7danmaku_SS7messageSi4codetcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/refused" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7refusedAeA0D16BPostableDanmakuC7danmaku_SS7messageSi4codetcAEmF">refused</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bilibili refused to accept the postable danmaku.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">refused</span><span class="p">(</span><span class="nv">danmaku</span><span class="p">:</span> <span class="kt"><a href="../../Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a></span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7abortedAeA0D16BPostableDanmakuC7danmaku_10Foundation4DataVSg4datas5Error_pSg5errortcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/aborted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC6ResultO7abortedAeA0D16BPostableDanmakuC7danmaku_10Foundation4DataVSg4datas5Error_pSg5errortcAEmF">aborted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Something else went wrong.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">aborted</span><span class="p">(</span><span class="nv">danmaku</span><span class="p">:</span> <span class="kt"><a href="../../Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a></span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://apollozhu.github.io" target="_blank" rel="external">ApolloZhu</a>. All rights reserved. (Last updated: 2018-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

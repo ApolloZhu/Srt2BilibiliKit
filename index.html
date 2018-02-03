@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Srt2BilibiliKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Srt2BilibiliKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Srt2BilibiliKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/ApolloZhu/Srt2BilibiliKit"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapollozhu%2Egithub%2Eio%2FSrt2BilibiliKit%2Fdocsets%2FSrt2BilibiliKit%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Srt2BilibiliKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Srt2BilibiliKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/S2BDanmaku.html">S2BDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/S2BDanmaku/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/S2BEmitter.html">S2BEmitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/S2BEmitter/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Sequence.html">Sequence</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/S2BSubRipFile.html">S2BSubRipFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/S2BSubtitle.html">S2BSubtitle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='srt2bilibilikit' class='heading'>Srt2BilibiliKit</h1>
+
+<p><a href="https://github.com/ApolloZhu/Srt2BilibiliKit/releases"><img src="https://img.shields.io/github/release/ApolloZhu/Srt2BilibiliKit/all.svg" alt="GitHub (pre-)release"></a> <a href="https://travis-ci.org/ApolloZhu/Srt2BilibiliKit"><img src="https://travis-ci.org/ApolloZhu/Srt2BilibiliKit.svg?branch=master" alt="Build Status"></a> <a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.1-ffac45.svg" alt="Swift 4.1"></a> <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager"></a> <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ApolloZhu/Srt2BilibiliKit.svg" alt="GPLv3 License"></a> <a href="https://apollozhu.github.io/Srt2BilibiliKit"><img src="https://apollozhu.github.io/Srt2BilibiliKit/badge.svg" alt="Documentation"></a> <a href="https://codecov.io/gh/ApolloZhu/Srt2BilibiliKit"><img src="https://codecov.io/gh/ApolloZhu/Srt2BilibiliKit/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://codebeat.co/projects/github-com-apollozhu-srt2bilibilikit-master"><img src="https://codebeat.co/badges/574e28e5-22dd-4e6c-8bd2-d6fcfa20fdc0" alt="codebeat badge"></a> <a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/ApolloZhu/Srt2BilibiliKit?branch=master" alt="BCH compliance"></a></p>
+
+<p><a href="./README_EN.md">English Introduction</a></p>
+
+<p>把 <code>.srt</code> 字幕文件作为弹幕发到 bilibili 的命令行程序。</p>
+<h2 id='' class='heading'>安装</h2>
+
+<p>因为本程序是通过 Swift 语言实现的，所以您需要先安装</p>
+
+<ul>
+<li>macOS: <a href="https://itunes.apple.com/app/id497799835"><img src="https://developer.apple.com/app-store/marketing/guidelines/mac/images/badge-download-on-the-mac-app-store.svg" alt="从 Mac App Store 免费下载正版 Xcode"></a></li>
+<li>Windows 10: 参考 <a href="https://apollozhu.github.io/2017/09/22/swift-on-win-10/">在 Windows 10 上跑 Swift</a> 或 <a href="https://www.bilibili.com/read/mobile/18127">B 站 cv18127</a></li>
+<li>Ubuntu: <code>eval &quot;$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/install/4)&quot;</code></li>
+</ul>
+
+<p>完成之后在命令行/终端里输入一下命令来下载并安装本程序到 <code>/usr/local/bin</code>：</p>
+<pre class="highlight shell"><code><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-sL</span> https://raw.githubusercontent.com/ApolloZhu/Srt2BilibiliKit/master/sh/install-cmd<span class="k">)</span><span class="s2">"</span>
+</code></pre>
+
+<p>安装完成后程序会自动显示使用方法。</p>
+<h2 id='' class='heading'>隐私政策</h2>
+
+<p>本程序采用扫码的方式登录 B 站，不需要您提供账号和密码。但标示您身份信息的 <a href="https://baike.baidu.com/item/cookie/1119">Cookie</a> 会且只会被明文保存到 <code>bilicookies</code> 文件和与弹幕一起发送给 B 站。 <strong><em>请避免分享此文件给其他人。</em></strong> 因使用本程序造成的一切后果，本程序开发者和其他贡献人员概不负责。</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://apollozhu.github.io" target="_blank" rel="external">ApolloZhu</a>. All rights reserved. (Last updated: 2018-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

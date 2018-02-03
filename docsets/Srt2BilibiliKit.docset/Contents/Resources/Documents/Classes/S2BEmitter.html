@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>S2BEmitter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/S2BEmitter" class="dashAnchor"></a>
+    <a title="S2BEmitter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Srt2BilibiliKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/ApolloZhu/Srt2BilibiliKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapollozhu%2Egithub%2Eio%2FSrt2BilibiliKit%2Fdocsets%2FSrt2BilibiliKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Srt2BilibiliKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        S2BEmitter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/S2BDanmaku.html">S2BDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BDanmaku/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BEmitter.html">S2BEmitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BEmitter/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/S2BSubRipFile.html">S2BSubRipFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/S2BSubtitle.html">S2BSubtitle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>S2BEmitter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">S2BEmitter</span></code></pre>
+
+                </div>
+              </div>
+            <p>Danmaku <q>poster</q></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC7defaultACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC7defaultACvZ">default</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default emitter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">let</span> <span class="p">`</span><span class="nv">default</span><span class="p">`</span> <span class="o">=</span> <span class="kt">S2BEmitter</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC12defaultDelaySdvZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultDelay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC12defaultDelaySdvZ">defaultDelay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Suggested cool time between sending danmaku in seconds.
+Number smaller than the default may result in ban or failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultDelay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">3.5</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC16defaultLongDelaySdvZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultLongDelay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC16defaultLongDelaySdvZ">defaultLongDelay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Suggested cool time when received -636 (frequency too high) from bilibili.
+Number smaller than the default may result in ban or failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultLongDelay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">60</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterCACSQy0bC09BKSessionCG7session_Sd5delaySd9longDelaytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(session:delay:longDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterCACSQy0bC09BKSessionCG7session_Sd5delaySd9longDelaytcfc">init(session:delay:longDelay:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initalize a S2BEmitter with specified session and delay.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">BKSession</span><span class="o">!</span> <span class="o">=</span> <span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="nv">delay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">S2BEmitter</span><span class="o">.</span><span class="n"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC12defaultDelaySdvZ">defaultDelay</a></span><span class="p">,</span> <span class="nv">longDelay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">S2BEmitter</span><span class="o">.</span><span class="n"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC16defaultLongDelaySdvZ">defaultLongDelay</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>session containing cookie required for posting danmaku.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>cool time between sending danmaku in seconds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>longDelay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>seconds between -636 and sending next danmaku.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L45-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterCAC0bC08BKCookieV6cookie_Sd5delaySd9longDelaytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cookie:delay:longDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterCAC0bC08BKCookieV6cookie_Sd5delaySd9longDelaytcfc">init(cookie:delay:longDelay:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initalize a S2BEmitter with specified
+cookie to add to the default session and delay.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cookie</span><span class="p">:</span> <span class="kt">BKCookie</span><span class="p">,</span> <span class="nv">delay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">S2BEmitter</span><span class="o">.</span><span class="n"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC12defaultDelaySdvZ">defaultDelay</a></span><span class="p">,</span> <span class="nv">longDelay</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">S2BEmitter</span><span class="o">.</span><span class="n"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC16defaultLongDelaySdvZ">defaultLongDelay</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cookie</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>cookie to be added to the default session.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>cool time between sending danmaku in seconds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>longDelay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>seconds between -636 and sending next danmaku.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L58-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC6ResultO"></a>
+                    <a name="//apple_ref/swift/Enum/Result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC6ResultO">Result</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Result after trying to post a danmaku.</p>
+
+<ul>
+<li>success: danmaku was successfully posted.</li>
+<li>refused: bilibili refused to accept the postable danmaku.</li>
+<li>aborted: something else went wrong.</li>
+</ul>
+
+                        <a href="../Classes/S2BEmitter/Result.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L68-L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC29FailablePostCompletionHandlera"></a>
+                    <a name="//apple_ref/swift/Alias/FailablePostCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC29FailablePostCompletionHandlera">FailablePostCompletionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>To handle result after tring to post a danmaku.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">FailablePostCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BEmitter/Result.html">Result</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>result after trying to post a danmaku.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC7tryPostyAA0D8BDanmakuC7danmaku_0bC07BKVideoV4PageV02toK0yAC6ResultOcSg17completionHandlertF"></a>
+                    <a name="//apple_ref/swift/Method/tryPost(danmaku:toPage:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC7tryPostyAA0D8BDanmakuC7danmaku_0bC07BKVideoV4PageV02toK0yAC6ResultOcSg17completionHandlertF">tryPost(danmaku:toPage:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Try to post a danmaku.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryPost</span><span class="p">(</span><span class="nv">danmaku</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BDanmaku.html">S2BDanmaku</a></span><span class="p">,</span> <span class="n">toPage</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">BKVideo</span><span class="o">.</span><span class="kt">Page</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC29FailablePostCompletionHandlera">FailablePostCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>danmaku</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>danmaku to post.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform once tried.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L98-L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC21PostCompletionHandlera"></a>
+                    <a name="//apple_ref/swift/Alias/PostCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC21PostCompletionHandlera">PostCompletionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Task to perform once a single danmaku was posted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">PostCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">posted</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>danmaku posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L181">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D8BDanmakuC7danmaku_0bC07BKVideoV4PageV02toJ0yAA0D14BPostedDanmakuCcSg17completionHandlertF"></a>
+                    <a name="//apple_ref/swift/Method/post(danmaku:toPage:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D8BDanmakuC7danmaku_0bC07BKVideoV4PageV02toJ0yAA0D14BPostedDanmakuCcSg17completionHandlertF">post(danmaku:toPage:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Post a danmaku, auto retry if failed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">post</span><span class="p">(</span><span class="nv">danmaku</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BDanmaku.html">S2BDanmaku</a></span><span class="p">,</span> <span class="n">toPage</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">BKVideo</span><span class="o">.</span><span class="kt">Page</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC21PostCompletionHandlera">PostCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>danmaku</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>danmaku to post.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform once the danmaku was successfully posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L188-L207">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC21ProgressReportHandlera"></a>
+                    <a name="//apple_ref/swift/Alias/ProgressReportHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC21ProgressReportHandlera">ProgressReportHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Task to perform once a danmaku in the queue was posted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ProgressReportHandler</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">posted</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Progress</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>danmaku posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>object tracking the current progress.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L214">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D9BSubtitleV8subtitle_0bC07BKVideoV4PageV02toJ0SayAA0D8BDanmakuC6ConfigVG7configsyAA0D14BPostedDanmakuC_So8ProgressCtcSg13updateHandlerySayAUGcSg010completionS0tF"></a>
+                    <a name="//apple_ref/swift/Method/post(subtitle:toPage:configs:updateHandler:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D9BSubtitleV8subtitle_0bC07BKVideoV4PageV02toJ0SayAA0D8BDanmakuC6ConfigVG7configsyAA0D14BPostedDanmakuC_So8ProgressCtcSg13updateHandlerySayAUGcSg010completionS0tF">post(subtitle:toPage:configs:updateHandler:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Post all contents within the subtile to video of given cid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">post</span><span class="p">(</span><span class="nv">subtitle</span><span class="p">:</span> <span class="kt"><a href="../Structs/S2BSubtitle.html">S2BSubtitle</a></span><span class="p">,</span> <span class="n">toPage</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">BKVideo</span><span class="o">.</span><span class="kt">Page</span><span class="p">,</span> <span class="nv">configs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/S2BDanmaku.html">S2BDanmaku</a></span><span class="o">.</span><span class="kt">Config</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="k">default</span><span class="p">],</span> <span class="nv">updateHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC21ProgressReportHandlera">ProgressReportHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">CompletionHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subtitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>subtitle to post.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>cid of the video to post to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>configurations of danmakus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform once a danmaku was posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform after all danmaku were posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L229-L255">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D11BSubRipFileV3srt_0bC07BKVideoV4PageV02toL0SayAA0D8BDanmakuC6ConfigVG7configsyAA0D14BPostedDanmakuC_So8ProgressCtcSg13updateHandlerySayAUGcSg010completionU0tF"></a>
+                    <a name="//apple_ref/swift/Method/post(srt:toPage:configs:updateHandler:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Srt2BilibiliKit10S2BEmitterC4postyAA0D11BSubRipFileV3srt_0bC07BKVideoV4PageV02toL0SayAA0D8BDanmakuC6ConfigVG7configsyAA0D14BPostedDanmakuC_So8ProgressCtcSg13updateHandlerySayAUGcSg010completionU0tF">post(srt:toPage:configs:updateHandler:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Post all contents within the file to video of given cid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">post</span><span class="p">(</span><span class="nv">srt</span><span class="p">:</span> <span class="kt"><a href="../Structs/S2BSubRipFile.html">S2BSubRipFile</a></span><span class="p">,</span> <span class="n">toPage</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">BKVideo</span><span class="o">.</span><span class="kt">Page</span><span class="p">,</span> <span class="nv">configs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/S2BDanmaku.html">S2BDanmaku</a></span><span class="o">.</span><span class="kt">Config</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="k">default</span><span class="p">],</span> <span class="nv">updateHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/S2BEmitter.html#/s:15Srt2BilibiliKit10S2BEmitterC21ProgressReportHandlera">ProgressReportHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">CompletionHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>srt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SubRip file to post.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>cid of the video to post to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>configurations of danmakus.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform once a danmaku was posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>task to perform after all danmaku were posted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BEmitter.swift#L265-L282">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://apollozhu.github.io" target="_blank" rel="external">ApolloZhu</a>. All rights reserved. (Last updated: 2018-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

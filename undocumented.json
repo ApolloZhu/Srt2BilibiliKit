@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit/Sources/Srt2BilibiliKit/S2BPostableDanmaku.swift",
+      "line": 17,
+      "symbol": "S2BPostableDanmaku.init(_:playTime:config:date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit/Sources/Srt2BilibiliKit/S2BPostableDanmaku.swift",
+      "line": 22,
+      "symbol": "S2BPostableDanmaku.init(_:playTime:rgb:fontSize:mode:pool:date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit/Sources/Srt2BilibiliKit/S2BPostableDanmaku.swift",
+      "line": 27,
+      "symbol": "S2BPostableDanmaku.init(_:date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit/Sources/Srt2BilibiliKit/S2BPostedDanmaku.swift",
+      "line": 25,
+      "symbol": "S2BPostedDanmaku.init(_:cid:playTime:config:date:id:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit/Sources/Srt2BilibiliKit/S2BPostedDanmaku.swift",
+      "line": 32,
+      "symbol": "S2BPostedDanmaku.init(_:cid:playTime:rgb:fontSize:mode:pool:date:id:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/ApolloZhu/Srt2BilibiliKit"
+}

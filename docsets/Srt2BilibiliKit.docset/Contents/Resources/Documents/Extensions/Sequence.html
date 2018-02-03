@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sequence Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Sequence" class="dashAnchor"></a>
+    <a title="Sequence Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Srt2BilibiliKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/ApolloZhu/Srt2BilibiliKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapollozhu%2Egithub%2Eio%2FSrt2BilibiliKit%2Fdocsets%2FSrt2BilibiliKit%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Srt2BilibiliKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Sequence Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/S2BDanmaku.html">S2BDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BDanmaku/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BEmitter.html">S2BEmitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BEmitter/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BPostableDanmaku.html">S2BPostableDanmaku</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/S2BPostedDanmaku.html">S2BPostedDanmaku</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/S2BSubRipFile.html">S2BSubRipFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/S2BSubtitle.html">S2BSubtitle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Sequence</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Sequence</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s8SequenceP15Srt2BilibiliKitE12filterOutNilSayqd__Gqd__Sg7ElementQzKcKlF"></a>
+                    <a name="//apple_ref/swift/Method/filterOutNil(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s8SequenceP15Srt2BilibiliKitE12filterOutNilSayqd__Gqd__Sg7ElementQzKcKlF">filterOutNil(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array containing the non-<code>nil</code> results of calling the given
+transformation with each element of this sequence.</p>
+
+<p>Use this method to receive an array of nonoptional values when your
+transformation produces an optional value.</p>
+
+<p>In this example, note the difference in the result of using <code>map</code> and
+<code>filterOutNil</code> with a transformation that returns an optional <code>Int</code> value.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="s">"three"</span><span class="p">,</span> <span class="s">"///4///"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">]</span>
+
+<span class="k">let</span> <span class="nv">mapped</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">?]</span> <span class="o">=</span> <span class="n">possibleNumbers</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">str</span> <span class="k">in</span> <span class="kt">Int</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// [1, 2, nil, nil, 5]</span>
+
+<span class="k">let</span> <span class="nv">flatMapped</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="n">filterOutNil</span> <span class="p">{</span> <span class="n">str</span> <span class="k">in</span> <span class="kt">Int</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// [1, 2, 5]</span>
+</code></pre>
+<div class="aside aside-complexity">
+    <p class="aside-title">Complexity</p>
+    <p>O(<em>m</em> + <em>n</em>), where <em>m</em> is the length of this sequence
+and <em>n</em> is the length of the result.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filterOutNil</span><span class="o">&lt;</span><span class="kt">ElementOfResult</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="o">.</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">ElementOfResult</span><span class="p">?</span>
+    <span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">ElementOfResult</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transform</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that accepts an element of this
+sequence as its argument and returns an optional value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of the non-<code>nil</code> results of calling <code>transform</code>
+with each element of the sequence.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ApolloZhu/Srt2BilibiliKit/tree/1.0.5/Sources/Srt2BilibiliKit/S2BSubtitle.swift#L100-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://apollozhu.github.io" target="_blank" rel="external">ApolloZhu</a>. All rights reserved. (Last updated: 2018-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
