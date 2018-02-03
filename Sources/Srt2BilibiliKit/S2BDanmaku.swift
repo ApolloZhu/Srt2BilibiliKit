@@ -74,7 +74,7 @@ public class S2BDanmaku {
             self.mode = mode ?? .bottom
             self.pool = pool ?? .normal
         }
-        
+
         /// Mode/Type of the danmaku.
         ///
         /// - normal: 滚动弹幕 (rolling) on bilibili.
@@ -82,7 +82,8 @@ public class S2BDanmaku {
         /// - top: 顶部弹幕 on bilibili.
         /// - reversed: 逆向弹幕 on bilibili.
         /// - special: 特殊弹幕 on bilibili.
-        /// - advanced: 高级弹幕 on bilibili.
+        /// - code: 代码弹幕 on bilibili.
+        /// - bas: bilibili animation script.
         public enum Mode: Int {
             /// 滚动弹幕 (rolling) on bilibili.
             case normal = 1
@@ -94,8 +95,10 @@ public class S2BDanmaku {
             case reversed = 6
             /// 特殊弹幕 on bilibili.
             case special = 7
-            /// 高级弹幕 on bilibili.
-            case advanced = 9
+            /// 代码弹幕 on bilibili.
+            case code = 8
+            /// bilibili animation script.
+            case bas = 9
         }
         
         /// Pool for the danmaku to post to.

@@ -53,7 +53,8 @@ let help = """
 \t5: Top
 \t6: Reversed
 \t7: Special
-\t9: Advanced
+\t8: Code
+\t9: Bilibili Animation Script
 
 -l pool (default \(S2BDanmaku.Config.default.pool.rawValue))
 \tThe Danmaku Pool to use.
