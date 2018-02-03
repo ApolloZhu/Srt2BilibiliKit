@@ -25,7 +25,8 @@ struct S2B {
     
     /// Container for "top level code"
     private init() {
-        #if os(Linux) || os(Android) || os(Windows)
+        #if os(iOS) || os(macOS) || os(watchOS) || os(tvOS)
+        #else
         srand(UInt32(time(nil)))
         #endif
     }

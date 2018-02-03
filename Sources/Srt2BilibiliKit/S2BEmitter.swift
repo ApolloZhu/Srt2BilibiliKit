@@ -20,19 +20,32 @@ public final class S2BEmitter {
     
     /// Cool time in seconds (time to wait before posting the next one).
     private let delay: Double
-    
+
+    /// Cool time in seconds (time to wait when received -636 from bilibili).
+    private let longDelay: Double
+
     /// Suggested cool time between sending danmaku in seconds.
     /// Number smaller than the default may result in ban or failure.
     public static let defaultDelay: Double = 3.5
-    
+
+    /// Suggested cool time when received -636 (frequency too high) from bilibili.
+    /// Number smaller than the default may result in ban or failure.
+    public static let defaultLongDelay: Double = 5 * 60
+
+    private func wait(seconds delay: Double = defaultDelay, then work: @escaping () -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay, execute: work)
+    }
+
     /// Initalize a S2BEmitter with specified session and delay.
     ///
     /// - Parameters:
     ///   - session: session containing cookie required for posting danmaku.
     ///   - delay: cool time between sending danmaku in seconds.
-    public init(session: BKSession! = .shared, delay: Double = S2BEmitter.defaultDelay) {
+    ///   - longDelay: seconds between -636 and sending next danmaku.
+    public init(session: BKSession! = .shared, delay: Double = S2BEmitter.defaultDelay, longDelay: Double = S2BEmitter.defaultLongDelay) {
         self.session = session
         self.delay = delay
+        self.longDelay = longDelay
     }
     
     /// Initalize a S2BEmitter with specified
@@ -41,9 +54,10 @@ public final class S2BEmitter {
     /// - Parameters:
     ///   - cookie: cookie to be added to the default session.
     ///   - delay: cool time between sending danmaku in seconds.
-    public convenience init(cookie: BKCookie, delay: Double = S2BEmitter.defaultDelay) {
+    ///   - longDelay: seconds between -636 and sending next danmaku.
+    public convenience init(cookie: BKCookie, delay: Double = S2BEmitter.defaultDelay, longDelay: Double = S2BEmitter.defaultLongDelay) {
         BKSession.shared.cookie = cookie
-        self.init(delay: delay)
+        self.init(delay: delay, longDelay: longDelay)
     }
     
     /// Result after trying to post a danmaku.
@@ -83,7 +97,7 @@ public final class S2BEmitter {
     ///   - completionHandler: task to perform once tried.
     public func tryPost(danmaku: S2BDanmaku, toPage page: BKVideo.Page, completionHandler: FailablePostCompletionHandler? = nil) {
         if isPosting {
-            DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
+            wait {  [weak self] in
                 self?.tryPost(danmaku: danmaku, toPage: page, completionHandler: completionHandler)
             }
         } else {
@@ -93,9 +107,9 @@ public final class S2BEmitter {
             let (postable, data) = S2BPostableDanmaku.byEncoding(danmaku, cid: page.cid, forSession: session)
             request.httpBody = data
             request.addValue("Srt2BilibiliKit", forHTTPHeaderField: "User-Agent")
-            let task = S2B.kit.urlSession.dataTask(with: request) { [weak self, delay] (data, response, error) in
+            let task = S2B.kit.urlSession.dataTask(with: request) { [weak self] (data, response, error) in
                 guard let handle = completionHandler else { self?.isPosting = false;return }
-                DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) { [weak self] in
+                self?.wait { [weak self] in
                     if let this = self, error == nil, let datium = data {
                         this.isPosting = false
                         if let result = try? JSONDecoder().decode(Success.self, from: datium), result.code == 0 {
@@ -173,13 +187,14 @@ public extension S2BEmitter {
     ///   - completionHandler: task to perform once the danmaku was successfully posted.
     public func post(danmaku: S2BDanmaku, toPage page: BKVideo.Page, completionHandler: PostCompletionHandler? = nil) {
         func emit() {
-            tryPost(danmaku: danmaku, toPage: page) { result in
+            tryPost(danmaku: danmaku, toPage: page) { [weak self] result in
                 switch result {
                 case .success(posted: let posted):
                     completionHandler?(posted)
                 case .refused(danmaku: let danmaku, message: let message, code: let code):
-                    if code == -636 { // Frequency too high
-                        emit()
+                    if code == -636, let `self` = self { // Frequency too high
+                        print("[S2B] Wait a \(self.longDelay) seconds...")
+                        self.wait(seconds: self.longDelay, then: emit)
                     } else {
                         fatalError("\(message): \(danmaku.content)")
                     }
