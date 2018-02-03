@@ -117,7 +117,7 @@ public final class S2BEmitter {
         /// ID assigned to this posted danmaku.
         let dmid: Int
     }
-    
+
     private struct Failure: Codable {
         /// Some negative number informing the error state.
         let code: Int
@@ -125,6 +125,38 @@ public final class S2BEmitter {
         let message: String
         /// I don't care what this is.
         let ts: Int
+
+        static let errorCodes = [
+            0:"系统错误，发送失败。",
+            -1:"选择的弹幕模式错误。",
+            -2:"用户被禁止。",
+            -3:"系统禁止。",
+            -4:"投稿不存在。",
+            -5:"UP主禁止。",
+            -6:"权限有误。",
+            -7:"视频未审核/未发布。",
+            -8:"禁止游客弹幕。",
+            -9:"禁止滚动弹幕、顶端弹幕、底端弹幕超过100字符。",
+            -101:"您的登录已经失效，请重新登录。",
+            -102:"您需要激活账号后才可以发送弹幕。",
+            -108:"您暂时失去了发送弹幕的权利，请与管理员联系。",
+            -400:"登录信息验证失败，请刷新后重试。",
+            -403:"您不能发送包含换行符的弹幕。",
+            -404:"您不能向一个不存在的弹幕池发送弹幕。",
+            -634:"禁止发送空白弹幕。",
+            -635:"禁止向未审核的视频发送弹幕。",
+            -636:"您发送弹幕的频率过快。",
+            -637:"弹幕包含被禁止的内容。",
+            -638:"您已经被禁言，不能发送弹幕。",
+            -639:"您的权限不足，不能发送这种样式的弹幕。",
+            -640:"您的节操低于60，不能发送弹幕。",
+            -641:"您的弹幕长度大于100。",
+            -651:"您的等级不足，不能发送彩色弹幕。",
+            -653:"您的等级不足，不能发送高级弹幕。",
+            -654:"您的等级不足，不能发送底端弹幕。",
+            -655:"您的等级不足，不能发送顶端弹幕。",
+            -656:"您的会员等级为Lv0，弹幕长度不能超过20字符。"
+        ]
     }
 }
 
@@ -145,8 +177,12 @@ public extension S2BEmitter {
                 switch result {
                 case .success(posted: let posted):
                     completionHandler?(posted)
-                case .refused(danmaku: let danmaku, message: let message, code: _):
-                    fatalError("\(message): \(danmaku.content)")
+                case .refused(danmaku: let danmaku, message: let message, code: let code):
+                    if code == -636 { // Frequency too high
+                        emit()
+                    } else {
+                        fatalError("\(message): \(danmaku.content)")
+                    }
                 case .aborted:
                     emit()
                 }
